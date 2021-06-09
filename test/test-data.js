@@ -73,4 +73,4 @@ const testBookings = [
   }
 ]
 
-export { testUsers , testRooms, testBookings}
+export { testUsers , testRooms, testBookings }
