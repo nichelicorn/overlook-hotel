@@ -15,6 +15,10 @@ class Guest {
     newBookingObj['userID'] = this.id;
     this.pendingBookings.push(newBookingObj);
   }
+
+  viewAllBookings() {
+    
+  }
 }
 
 export default Guest;

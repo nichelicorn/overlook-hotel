@@ -135,7 +135,7 @@ describe.only('The Guest', () => {
     // iterate through testBookings
     // if the booking.userID === guest.id
     // return the booking object to the correct array in the guest constructor
-    it.skip('should return all bookings', () => {
+    it('should return all bookings', () => {
       guest1.viewAllBookings();
 
       expect(guest1.pastBookings).to.deep.equal({
