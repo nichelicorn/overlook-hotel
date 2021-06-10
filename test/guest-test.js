@@ -56,13 +56,13 @@ describe.only('The Guest', () => {
       expect(guest3.pastBookings).to.deep.equal([]);
     })
 
-    it.skip('should store past bookings in an array', () => {
+    it('should store past bookings in an array', () => {
       expect(guest1.pastBookings).to.be.an('array');
       expect(guest2.pastBookings).to.be.an('array');
       expect(guest3.pastBookings).to.be.an('array');
     })
 
-    it.skip('should store future bookings', () => {
+    it('should store future bookings', () => {
       expect(guest1.futureBookings).to.deep.equal([]);
       expect(guest2.futureBookings).to.deep.equal([]);
       expect(guest3.futureBookings).to.deep.equal([]);

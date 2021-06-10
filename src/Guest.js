@@ -3,6 +3,7 @@ class Guest {
     this.id = id;
     this.name = name;
     this.pastBookings = [];
+    this.futureBookings = [];
   }
 }
 
