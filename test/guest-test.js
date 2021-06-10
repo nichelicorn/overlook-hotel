@@ -22,4 +22,96 @@ describe('The Guest', () => {
     booking6 = testBookings[5];
   })
 
+  // 🧪 Guest.constructor() tests
+  describe('Guest properties', () => {
+
+    it.skip('should store an id', () => {
+
+    })
+
+    it.skip('should store the id as a number', () => {
+
+    })
+
+    it.skip('should store a name', () => {
+
+    })
+
+    it.skip('should store the name as a string', () => {
+
+    })
+
+    it.skip('should store past bookings', () => {
+
+    })
+
+    it.skip('should store past bookings in an array', () => {
+
+    })
+
+    it.skip('should store future bookings', () => {
+
+    })
+
+    it.skip('should store future bookings in an array', () => {
+
+    })
+
+    it.skip('should store the total amount spent', () => {
+
+    })
+
+    it.skip('should store the total spent as a number', () => {
+
+    })
+
+    // it.skip('should store a user name', () => { // this is part of sprint 3; not included in the API data
+    //
+    // })
+
+    // it.skip('should store the user name as a string', () => {
+    //
+    // })
+
+    // it.skip('should store a password', () => { // this is part of sprint 3; not included in the API data
+    //
+    // })
+
+    // it.skip('should store the password as a string', () => {
+    //
+    // })
+
+  describe('Guest methods', () => {
+
+    // Guest.calcTotalSpent
+    it.skip('should return the total spent at the hotel', () => {
+
+    })
+
+    it.skip('should return the total spent as a number', () => {
+
+    })
+
+    // Guest.viewAllBookings
+    it.skip('should return all bookings', () => {
+
+    })
+
+    it.skip('should return bookings as an array of objects', () => {
+
+    })
+
+    // Guest.requestBooking
+    it.skip('should be able to request a new booking', () => {
+
+    })
+
+    it.skip('should add the requested booking to future bookings', () => {
+
+    })
+
+  })
+
+
+  })
 })
