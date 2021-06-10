@@ -32,25 +32,25 @@ describe.only('The Guest', () => {
       expect(guest3.id).to.equal(13);
     })
 
-    it.skip('should store the id as a number', () => {
+    it('should store the id as a number', () => {
       expect(guest1.id).to.be.a('number');
       expect(guest2.id).to.be.a('number');
       expect(guest3.id).to.be.a('number');
     })
 
-    it.skip('should store a name', () => {
+    it('should store a name', () => {
       expect(guest1.name).to.equal("Wendy Torrance");
       expect(guest2.name).to.equal("Delbert Grady");
       expect(guest3.name).to.equal("Dick Hallorann");
     })
 
-    it.skip('should store the name as a string', () => {
+    it('should store the name as a string', () => {
       expect(guest1.name).to.be.a('string');
       expect(guest2.name).to.be.a('string');
       expect(guest3.name).to.be.a('string');
     })
 
-    it.skip('should store past bookings', () => { // this property is not stored in the API
+    it('should store past bookings', () => { // this property is not stored in the API
       expect(guest1.pastBookings).to.deep.equal([]);
       expect(guest2.pastBookings).to.deep.equal([]);
       expect(guest3.pastBookings).to.deep.equal([]);
