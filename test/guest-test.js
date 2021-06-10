@@ -80,13 +80,13 @@ describe.only('The Guest', () => {
       expect(guest3.totalSpent).to.equal(0);
     })
 
-    it.skip('should store the total spent as a number', () => {
+    it('should store the total spent as a number', () => {
       expect(guest1.totalSpent).to.be.a('number');
       expect(guest2.totalSpent).to.be.a('number');
       expect(guest3.totalSpent).to.be.a('number');
     })
 
-    // it.skip('should store a user name', () => { // this is part of sprint 3; not included in the API data
+    // it.skip('should store a user name', () => { // this will probably need a method to assign the username when the user is created on pageload
     //
     // })
 
@@ -94,7 +94,7 @@ describe.only('The Guest', () => {
     //
     // })
 
-    // it.skip('should store a password', () => { // this is part of sprint 3; not included in the API data
+    // it.skip('should store a password', () => { 
     //
     // })
 
