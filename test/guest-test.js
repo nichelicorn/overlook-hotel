@@ -94,7 +94,7 @@ describe.only('The Guest', () => {
     //
     // })
 
-    // it.skip('should store a password', () => { 
+    // it.skip('should store a password', () => {
     //
     // })
 
@@ -106,7 +106,7 @@ describe.only('The Guest', () => {
     // Guest.requestBooking
     // create new Booking object ?
     // create a data object that can be used in the Hotel class to create a new booking? 👈 going to try this one first
-    it.skip('should be able to request a new booking', () => {
+    it('should be able to request a new booking', () => {
       guest1.requestBooking("2021/10/31", 217); // need to pass through the date and room number
 
       // add a Guest.constructor property for pendingBookings = [{}]

@@ -6,6 +6,10 @@ class Guest {
     this.futureBookings = [];
     this.totalSpent = 0;
   }
+
+  requestBooking() {
+    
+  }
 }
 
 export default Guest;
