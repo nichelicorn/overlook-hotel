@@ -1,4 +1,4 @@
-const testUsers = [
+const testGuests = [
   { id: 3,
     name: "Wendy Torrance"
   },
@@ -73,4 +73,4 @@ const testBookings = [
   }
 ]
 
-export { testUsers , testRooms, testBookings }
+export { testGuests , testRooms, testBookings }
