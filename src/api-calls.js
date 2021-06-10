@@ -12,15 +12,19 @@ const apiCalls = () => {
   const allBookingData = fetch('http://localhost:3001/api/v1/bookings')
     .then(response => response.json())
     .then(allBookingData => console.log('Bookings', allBookingData))
-    
 
-  // return Promise.all(allGuestData)
-  //   .then(data => {
-  //     const allData = {}
-  //     // allData.allGuestData = data
-  //     return allData
-  //   })
-    .catch(err => console.log('Error 🧟 ', err))
+
+  return Promise.all([allGuestData, allRoomData, allBookingData])
+    .then(data => {
+      const allData = {}
+      console.log()
+      allData.allGuestData = data[0]
+      allData.allRoomData = data[1]
+      allData.allBookingData = data[2]
+      return allData
+    })
+
+  .catch(err => console.log('Error 🧟 ', err))
 }
 
 export { apiCalls }
