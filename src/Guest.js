@@ -4,6 +4,7 @@ class Guest {
     this.name = name;
     this.pastBookings = [];
     this.futureBookings = [];
+    this.totalSpent = 0;
   }
 }
 
