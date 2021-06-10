@@ -24,41 +24,41 @@ describe('The Hotel', () => {
   describe('Hotel methods', () => {
 
     // Hotel.filterRoomsByType
-    it('should return all rooms by type', () => {
+    it.skip('should return all rooms by type', () => {
 
     })
 
-    it('should not return room types that have not been selected', () => {
+    it.skip('should not return room types that have not been selected', () => {
 
     })
 
     // Hotel.viewAvailRooms
-    it('should return all rooms available on a selected date', () => {
+    it.skip('should return all rooms available on a selected date', () => {
 
     })
 
-    it('should return a message if no rooms are available on the selected date', () => {
+    it.skip('should return a message if no rooms are available on the selected date', () => {
 
     })
 
-    it('should not return rooms that have been booked on the selected date', () => {
+    it.skip('should not return rooms that have been booked on the selected date', () => {
 
     })
 
-    it('should create a new booking when a valid selection has been made', () => {
+    it.skip('should create a new booking when a valid selection has been made', () => {
 
     })
 
-    it('should not create a new booking if all fields are not completed', () => {
+    it.skip('should not create a new booking if all fields are not completed', () => {
 
     })
 
-    it('should allow a user to log in', () => {
+    it.skip('should allow a user to log in', () => {
 
     })
 
-    it('should not grant log in access if credentials are invalid', () => {
-      
+    it.skip('should not grant log in access if credentials are invalid', () => {
+
     })
 
 
