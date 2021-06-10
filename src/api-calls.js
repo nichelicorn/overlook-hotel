@@ -9,6 +9,11 @@ const apiCalls = () => {
     .then(allRoomData => console.log('Rooms', allRoomData))
     .then(allRoomData => { return allRoomData })
 
+  const allBookingData = fetch('http://localhost:3001/api/v1/bookings')
+    .then(response => response.json())
+    .then(allBookingData => console.log('Bookings', allBookingData))
+    
+
   // return Promise.all(allGuestData)
   //   .then(data => {
   //     const allData = {}
