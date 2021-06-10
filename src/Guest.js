@@ -10,7 +10,9 @@ class Guest {
 
   requestBooking(date, room) {
     let newBookingObj = {};
-
+    newBookingObj['date'] = date;
+    newBookingObj['roomNumber'] = room;
+    newBookingObj['userID'] = this.id;
     this.pendingBookings.push(newBookingObj);
   }
 }
