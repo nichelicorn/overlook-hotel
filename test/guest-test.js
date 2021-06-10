@@ -110,7 +110,7 @@ describe.only('The Guest', () => {
       guest1.requestBooking("2021/10/31", 217); // need to pass through the date and room number
 
       // add a Guest.constructor property for pendingBookings = [{}]
-      expect(guest.pendingBookings).to.deep.equal({ // create a partial object
+      expect(guest1.pendingBookings).to.deep.equal({ // create a partial object
         date: "2020/10/31",
         roomNumber: 42
       });
@@ -119,7 +119,7 @@ describe.only('The Guest', () => {
       //   userID: 3,
       //   date: "2020/10/31",
       //   roomNumber: 42,
-      //   roomServiceCharges: [],
+      //   roomServiceCharges: [], // this is a default property of the Booking class; doesn't need to be set up in the object
       // });
     })
 

@@ -7,7 +7,7 @@ class Guest {
     this.totalSpent = 0;
   }
 
-  requestBooking() {
+  requestBooking(date, room) {
     
   }
 }
