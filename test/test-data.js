@@ -7,6 +7,9 @@ const testGuests = [
   },
   { id: 13,
     name: "Dick Hallorann"
+  },
+  { id: 42,
+    name: "Danny Torrance"
   }
 ]
 
