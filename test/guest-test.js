@@ -5,12 +5,13 @@ import Guest from '../src/Guest';
 
 describe.only('The Guest', () => {
 
-  let guest1, guest2, guest3, room1, room2, room3, booking1, booking2, booking3, booking4, booking5, booking6;
+  let guest1, guest2, guest3, guest4, room1, room2, room3, booking1, booking2, booking3, booking4, booking5, booking6;
 
   beforeEach(() => {
     guest1 = new Guest(testGuests[0]);
     guest2 = new Guest(testGuests[1]);
     guest3 = new Guest(testGuests[2]);
+    guest4 = new Guest(testGuests[3]);
     room1 = testRooms[0];
     room2 = testRooms[1];
     room3 = testRooms[2];
@@ -74,11 +75,15 @@ describe.only('The Guest', () => {
     })
 
     it.skip('should store the total amount spent', () => {
-
+      expect(guest1.totalSpent).to.equal(0);
+      expect(guest2.totalSpent).to.equal(0);
+      expect(guest3.totalSpent).to.equal(0);
     })
 
     it.skip('should store the total spent as a number', () => {
-
+      expect(guest1.totalSpent).to.be.a('number');
+      expect(guest2.totalSpent).to.be.a('number');
+      expect(guest3.totalSpent).to.be.a('number');
     })
 
     // it.skip('should store a user name', () => { // this is part of sprint 3; not included in the API data
@@ -99,21 +104,36 @@ describe.only('The Guest', () => {
 
   describe('Guest methods', () => {
 
-    // Guest.calcTotalSpent
-    it.skip('should return the total spent at the hotel', () => {
-
-    })
-
-    it.skip('should return the total spent as a number', () => {
-
-    })
-
     // Guest.viewAllBookings
+    // iterate through testBookings
+    // if the booking.userID === guest.id
+    // return the booking object to the correct array in the guest constructor
     it.skip('should return all bookings', () => {
+      guest1.viewAllBookings();
 
+      expect(guest1.pastBookings).to.deep.equal({
+        id: "5fwrgu4i7k55hl6sz",
+        userID: 3,
+        date: "2020/10/31",
+        roomNumber: 42,
+        roomServiceCharges: [],
+      })
+      expect(guest1.futureBookings).to.deep.equal({
+        id: "5fwrgu4i7k55hl6sz",
+        userID: 3,
+        date: "2021/10/31",
+        roomNumber: 217,
+        roomServiceCharges: [],
+      })
     })
 
     it.skip('should return bookings as an array of objects', () => {
+      guest2.viewAllBookings();
+
+      expect(guest2.pastBookings).to.be.an.array.of('objects'); // not sure if this one will work
+    })
+
+    it.skip('should return an empty array if no bookings have been made', () => {
 
     })
 
@@ -125,6 +145,24 @@ describe.only('The Guest', () => {
     it.skip('should add the requested booking to future bookings', () => {
 
     })
+
+    // Guest.calcTotalSpent
+    // what data is needed to calculate the total amt spent?
+    // need room number
+    // need room cost per night
+    // need booking date
+    // need booking roomServiceCharges
+    // need data for pastBookings
+    // need data for futureBookings
+    it.skip('should return the total spent at the hotel', () => {
+
+    })
+
+    it.skip('should return the total spent as a number', () => {
+
+    })
+
+
 
   })
 
