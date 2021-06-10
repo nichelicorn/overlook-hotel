@@ -3,7 +3,7 @@ const expect = chai.expect;
 import { testGuests , testRooms, testBookings} from '../test/test-data';
 import Guest from '../src/Guest';
 
-describe('The Guest', () => {
+describe.only('The Guest', () => {
 
   let guest1, guest2, guest3, room1, room2, room3, booking1, booking2, booking3, booking4, booking5, booking6;
 
@@ -26,19 +26,27 @@ describe('The Guest', () => {
   describe('Guest properties', () => {
 
     it.skip('should store an id', () => {
-      expect()
+      expect(guest1.id).to.equal(3);
+      expect(guest2.id).to.equal(7);
+      expect(guest3.id).to.equal(13);
     })
 
     it.skip('should store the id as a number', () => {
-
+      expect(guest1.id).to.be.a('number');
+      expect(guest2.id).to.be.a('number');
+      expect(guest3.id).to.be.a('number');
     })
 
     it.skip('should store a name', () => {
-
+      expect(guest1.name).to.equal("Wendy Torrance");
+      expect(guest2.name).to.equal("Delbert Grady");
+      expect(guest3.name).to.equal("Dick Hallorann");
     })
 
     it.skip('should store the name as a string', () => {
-
+      expect(guest1.name).to.be.a('string');
+      expect(guest2.name).to.be.a('string');
+      expect(guest3.name).to.be.a('string');
     })
 
     it.skip('should store past bookings', () => {
