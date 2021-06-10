@@ -49,20 +49,28 @@ describe.only('The Guest', () => {
       expect(guest3.name).to.be.a('string');
     })
 
-    it.skip('should store past bookings', () => {
-
+    it.skip('should store past bookings', () => { // this property is not stored in the API
+      expect(guest1.pastBookings).to.deep.equal([]);
+      expect(guest2.pastBookings).to.deep.equal([]);
+      expect(guest3.pastBookings).to.deep.equal([]);
     })
 
     it.skip('should store past bookings in an array', () => {
-
+      expect(guest1.pastBookings).to.be.an('array');
+      expect(guest2.pastBookings).to.be.an('array');
+      expect(guest3.pastBookings).to.be.an('array');
     })
 
     it.skip('should store future bookings', () => {
-
+      expect(guest1.futureBookings).to.deep.equal([]);
+      expect(guest2.futureBookings).to.deep.equal([]);
+      expect(guest3.futureBookings).to.deep.equal([]);
     })
 
     it.skip('should store future bookings in an array', () => {
-
+      expect(guest1.futureBookings).to.be.an('array');
+      expect(guest2.futureBookings).to.be.an('array');
+      expect(guest3.futureBookings).to.be.an('array');
     })
 
     it.skip('should store the total amount spent', () => {
