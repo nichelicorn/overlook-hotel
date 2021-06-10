@@ -8,10 +8,10 @@ describe.only('The Guest', () => {
   let guest1, guest2, guest3, guest4, room1, room2, room3, booking1, booking2, booking3, booking4, booking5, booking6;
 
   beforeEach(() => {
-    guest1 = new Guest(testGuests[0]);
-    guest2 = new Guest(testGuests[1]);
-    guest3 = new Guest(testGuests[2]);
-    guest4 = new Guest(testGuests[3]);
+    guest1 = new Guest(testGuests[0].id, testGuests[0].name);
+    guest2 = new Guest(testGuests[1].id, testGuests[1].name);
+    guest3 = new Guest(testGuests[2].id, testGuests[2].name);
+    guest4 = new Guest(testGuests[3].id, testGuests[3].name);
     room1 = testRooms[0];
     room2 = testRooms[1];
     room3 = testRooms[2];
@@ -26,7 +26,7 @@ describe.only('The Guest', () => {
   // 🧪 Guest.constructor() tests
   describe('Guest properties', () => {
 
-    it.skip('should store an id', () => {
+    it('should store an id', () => {
       expect(guest1.id).to.equal(3);
       expect(guest2.id).to.equal(7);
       expect(guest3.id).to.equal(13);
