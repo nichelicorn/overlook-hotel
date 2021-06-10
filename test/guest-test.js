@@ -123,11 +123,11 @@ describe.only('The Guest', () => {
       }]);
     })
 
-    it.skip('should not be able to request a booking if no room number is included', () => {
+    it.skip('should not be able to request a booking if no room number is included', () => { // seems like this might be a DOM / fetch error handling issue rather than a class issue
       expect(guest4.requestBooking("2021/10/31")).to.equal('Please choose a room number');
     })
 
-    it.skip('should not be able to request a booking if no date is selected', () => {
+    it.skip('should not be able to request a booking if no date is selected', () => { // seems like this might be a DOM / fetch error handling issue rather than a class issue
       expect(guest4.requestBooking(217)).to.equal('Please select a date for your stay at the Overlook Hotel');
     })
 
