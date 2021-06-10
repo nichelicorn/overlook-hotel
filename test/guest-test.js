@@ -110,10 +110,17 @@ describe.only('The Guest', () => {
       guest1.requestBooking("2021/10/31", 217); // need to pass through the date and room number
 
       // add a Guest.constructor property for pendingBookings = [{}]
-      expect(guest.pendingBookings).to.deep.equal({
+      expect(guest.pendingBookings).to.deep.equal({ // create a partial object
         date: "2020/10/31",
         roomNumber: 42
       });
+      // expect(guest1.pendingBookings).to.deep.equal({ // create the full data object
+      //   id: "5fwrgu4i7k55hl6sz", // this seems like the least likely to come from the Guest class, and would need to be part of the new Booking object created in the Hotel class
+      //   userID: 3,
+      //   date: "2020/10/31",
+      //   roomNumber: 42,
+      //   roomServiceCharges: [],
+      // });
     })
 
     it.skip('should not be able to request a booking if no room number is included', () => {
