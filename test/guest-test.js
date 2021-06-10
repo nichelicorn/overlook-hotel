@@ -103,6 +103,15 @@ describe.only('The Guest', () => {
     // })
 
   describe('Guest methods', () => {
+    // Guest.requestBooking
+    // create new Booking object ?
+    it.skip('should be able to request a new booking', () => {
+
+    })
+
+    it.skip('should add the requested booking to future bookings', () => {
+
+    })
 
     // Guest.viewAllBookings
     // iterate through testBookings
@@ -131,19 +140,14 @@ describe.only('The Guest', () => {
       guest2.viewAllBookings();
 
       expect(guest2.pastBookings).to.be.an.array.of('objects'); // not sure if this one will work
+      expect(guest2.futureBookings).to.be.an.array.of('objects');
     })
 
     it.skip('should return an empty array if no bookings have been made', () => {
+      guest4.viewAllBookings();
 
-    })
-
-    // Guest.requestBooking
-    it.skip('should be able to request a new booking', () => {
-
-    })
-
-    it.skip('should add the requested booking to future bookings', () => {
-
+      expect(guest4.futureBookings).to.deep.equal([]);
+      expect(guest4.futureBookings).to.deep.equal([]);
     })
 
     // Guest.calcTotalSpent
