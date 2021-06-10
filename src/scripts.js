@@ -13,7 +13,7 @@ console.log('This is the JavaScript entry file - your code begins here.');
 window.addEventListener('load', onLoad);
 
 function onLoad() {
-  console.log('allGuestData 👇');
+  // console.log('allGuestData 👇');
   apiCalls()
-  // .then(allData => console.log(allData))
+  .then(allData => console.log('in the scripts file!', allData))
 }
