@@ -177,17 +177,20 @@ describe.only('The Guest', () => {
     // need data for pastBookings
     // need data for futureBookings
     it.skip('should return the total spent at the hotel', () => {
+      guest1.calcTotalSpent();
+      guest2.calcTotalSpent();
+      guest3.calcTotalSpent();
 
+      expect(guest1.totalSpent).to.equal(777.77);
+      expect(guest2.totalSpent).to.equal(888.88);
+      expect(guest3.totalSpent).to.equal(999.99);
     })
 
-    it.skip('should return the total spent as a number', () => {
+    it.skip('should return zero if nothing has been spent', () => {
+      guest4.calcTotalSpent();
 
+      expect(guest4.totalSpent).to.equal(0);
     })
-
-
-
   })
-
-
   })
 })
