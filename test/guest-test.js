@@ -105,12 +105,23 @@ describe.only('The Guest', () => {
   describe('Guest methods', () => {
     // Guest.requestBooking
     // create new Booking object ?
+    // create a data object that can be used in the Hotel class to create a new booking? 👈 going to try this one first
     it.skip('should be able to request a new booking', () => {
+      guest1.requestBooking("2021/10/31", 217); // need to pass through the date and room number
 
+      // add a Guest.constructor property for pendingBookings = [{}]
+      expect(guest.pendingBookings).to.deep.equal({
+        date: "2020/10/31",
+        roomNumber: 42
+      });
     })
 
-    it.skip('should add the requested booking to future bookings', () => {
+    it.skip('should not be able to request a booking if no room number is included', () => {
+      expect(guest4.requestBooking("2021/10/31")).to.equal('Please choose a room number');
+    })
 
+    it.skip('should not be able to request a booking if no date is selected', () => {
+      expect(guest4.requestBooking(217)).to.equal('Please select a date for your stay at the Overlook Hotel');
     })
 
     // Guest.viewAllBookings
