@@ -26,49 +26,49 @@ describe.only('The Booking', () => {
     // it.skip('should store the id as a string', () => {
     // })
 
-    it.skip('should store a user id', () => {
+    it('should store a user id', () => {
       expect(booking1.userID).to.equal(3);
       expect(booking3.userID).to.equal(7);
       expect(booking5.userID).to.equal(13);
     })
 
-    it.skip('should store the user id as a number', () => {
+    it('should store the user id as a number', () => {
       expect(booking1.userID).to.be.a('number');
       expect(booking3.userID).to.be.a('number');
       expect(booking5.userID).to.be.a('number');
     })
 
-    it.skip('should store a date', () => {
+    it('should store a date', () => {
       expect(booking2.date).to.equal("2021/10/31");
       expect(booking4.date).to.equal("2021/10/31");
       expect(booking6.date).to.equal("2021/10/31");
     })
 
-    it.skip('should store the date as a string', () => {
+    it('should store the date as a string', () => {
       expect(booking1.date).to.be.a('string');
       expect(booking3.date).to.be.a('string');
       expect(booking5.date).to.be.a('string');
     })
 
-    it.skip('should store a room number', () => {
+    it('should store a room number', () => {
       expect(booking2.roomNumber).to.equal(217);
       expect(booking4.roomNumber).to.equal(42);
       expect(booking6.roomNumber).to.equal(237);
     })
 
-    it.skip('should store the room number as a number', () => {
+    it('should store the room number as a number', () => {
       expect(booking1.roomNumber).to.be.a('number');
       expect(booking3.roomNumber).to.be.a('number');
       expect(booking5.roomNumber).to.be.a('number');
     })
 
-    it.skip('should store room service charges', () => {
+    it('should store room service charges', () => {
       expect(booking2.roomServiceCharges).to.deep.equal([]);
       expect(booking4.roomServiceCharges).to.deep.equal([]);
       expect(booking6.roomServiceCharges).to.deep.equal([]);
     })
 
-    it.skip('should store room service charges in an array', () => {
+    it('should store room service charges in an array', () => {
       expect(booking1.roomServiceCharges).to.be.an('array');
       expect(booking3.roomServiceCharges).to.be.an('array');
       expect(booking5.roomServiceCharges).to.be.an('array');
