@@ -138,20 +138,8 @@ describe.only('The Guest', () => {
     it('should return all bookings', () => {
       guest1.viewAllBookings();
 
-      expect(guest1.pastBookings).to.deep.equal([{
-        id: "5fwrgu4i7k55hl6sz",
-        userID: 3,
-        date: "2020/10/31",
-        roomNumber: 42,
-        roomServiceCharges: [],
-      }])
-      expect(guest1.futureBookings).to.deep.equal([{
-        id: "5fwrgu4i7k55hl6sz",
-        userID: 3,
-        date: "2021/10/31",
-        roomNumber: 217,
-        roomServiceCharges: [],
-      }])
+      expect(guest1.pastBookings).to.deep.equal([booking1]);
+      expect(guest1.futureBookings).to.deep.equal([booking2]);
     })
 
     it.skip('should return bookings as an array of objects', () => {
