@@ -22,6 +22,12 @@ const apiCalls = {
     .catch(err => console.log('Error 🧟 : ', err))
   },
 
+  getAllData() {
+    let promises = [ apiCalls.getGuestData(), apiCalls.getRoomData(), apiCalls.getBookingData() ]
+    return Promise.all(promises)
+    .then(allData => { return allData })
+    .catch(err => console.log('Error 🧟 : ', err))
+  },
   // return Promise.all([allGuestData, allRoomData, allBookingData])
   //   .then(data => {
   //     // const allData = data
@@ -32,15 +38,6 @@ const apiCalls = {
   //     return allData
   //     // return data
   //   })
-
-  // getAllData() {
-  //   let promises = [ apiCalls.getGuestData() ];
-  //   return Promise.all(promises)
-  //   .then(allData => { return allData })
-  //   .catch(error => console.log(`Error : 🧟 : ${error}`))
-  // },
-
-  // .catch(err => console.log('Error 🧟 ', err))
 }
 
 export default apiCalls;
