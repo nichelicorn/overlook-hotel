@@ -17,16 +17,13 @@ let allGuests, allRooms, allBookings;
 
 
 window.addEventListener('load', loadAPIData);
-console.log('apiCalls 👇');
-console.log(apiCalls);
 
 function loadAPIData() {
-  // console.log('allGuestData 👇')
   apiCalls.getGuestData()
     .then(allGuestData => {
+      allGuests = allGuestData
       console.log('hello all guests!')
-      console.log(allGuestData)
-      // returns undefined if there are console.logs in apiCalls.getGuestData ; with all console.logs in api-calls this works to log guest data in the console from the scripts file; fetch is weird
+      console.log(allGuests)
     })
   apiCalls.getRoomData()
     .then(allRoomData => {
