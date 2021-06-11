@@ -35,9 +35,22 @@ function loadAPIData() {
   //       console.log(allBookingData)
   //     })
   apiCalls.getAllData()
-    .then(allData => console.log('allData <>>>', allData))
+    // .then(allData => console.log('allData <>>>', allData))
     // logs an array [{3}]
     // 0: obj customers: [50]
     // 1: obj rooms: [25]
     // 2: obj bookings: [1004]
+    .then(allData => {
+      allGuests = allData[0];
+      allRooms = allData[1];
+      allBookings = allData[2];
+    }
+  )
+  setTimeout(logPickleData, 5000);
+}
+
+function logPickleData() {
+  console.log('pickle Guests <>>>', allGuests);
+  console.log('pickle Rooms <>>>', allRooms);
+  console.log('pickle Bookings <>>>', allBookings);
 }
