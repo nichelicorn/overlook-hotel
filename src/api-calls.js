@@ -15,10 +15,8 @@ const apiCalls = {
       .catch(err => console.log('Error 🧟 : ', err))
   }
 
-  // const getRoomData = fetch('http://localhost:3001/api/v1/rooms')
-  //   .then(response => response.json())
-  //   // .then(allRoomData => console.log('Rooms', allRoomData))
-  //   .then(allRoomData => { return allRoomData })
+  
+
   //
   // const getBookingData = fetch('http://localhost:3001/api/v1/bookings')
   //   .then(response => response.json())
