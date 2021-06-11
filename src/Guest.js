@@ -2,6 +2,7 @@ import { testBookings, testRooms } from '../test/test-data';
 // refactor these methods to expect the API data when connected to the DOM
 // remove these when everything is connected in the scripts file
 
+
 class Guest {
   constructor(id, name) {
     this.id = id;
@@ -43,10 +44,32 @@ class Guest {
 
   calcTotalSpent() {
     console.log('this.allBookings <>>>', this.allBookings);
+    // add the costPerNight to the existing this.allBookings objects
+    let nightlyRoomCharge = testRooms.map(room => { // iterate through the rooms
+    // want the room roomNumber
+    // want the costPerNight
+      // console.log('room <>>>', room);
+      // console.log('room.number <>>>', room.number);
+      // console.log('room.costPerNight <>>>', room.costPerNight);
+      // console.log('if? <>>>', room.userID === this.id); // ah! i'm looking at the room! i think i'm looking for the booking
+      let objAdjuster = this.allBookings.map(booking => {
+      // now i am inside my bookings, and i want to add the room cost to the existing object
+      // if the room number is found in the booking object
+      // add a new property to the object with the room cost per night
 
-    let nightlyCost = testRooms.map(room => { // need to get the booking first from this.allBookings
-      // if ()
+        // console.log('booking <>>>', booking);
+
+        if (booking.userID === this.id && booking.roomNumber === room.number) {
+          // console.log('we found a room!')
+          // console.log('room in the bookings <>>>', room );
+          // console.log('conditional <>>>', booking.roomNumber === room.number); // two `trues`
+          booking['nightlyRoomCharge'] = room.costPerNight
+          console.log('booking <>>>', booking);
+        }
+      })
     })
+
+
   }
 }
 

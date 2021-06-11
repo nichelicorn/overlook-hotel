@@ -159,10 +159,11 @@ describe.only('The Guest', () => {
     // what data is needed to calculate the total amt spent?
     // need room number
     // need room cost per night
-    // need booking date
+    // need booking date // not sure this is needed, each object is one date, so would just need to count each object once on the cost per night
     // need booking roomServiceCharges
-    // need data for pastBookings
-    // need data for futureBookings
+    // need data for allBookings
+    // 🙅‍♀️ need data for pastBookings
+    // 🙅‍♀️ need data for futureBookings
     it('should return the total spent at the hotel', () => {
       guest1.viewAllBookings();
 
