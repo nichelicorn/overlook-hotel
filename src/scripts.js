@@ -27,6 +27,11 @@ function loadAPIData() {
       console.log('let\'s check out these rooms! 👇')
       console.log(allRoomData)
     })
+  apiCalls.getBookingData()
+      .then(allBookingData => {
+        console.log('so many bookings! 👇')
+        console.log(allBookingData)
+      })
   // console.log('allData 👇')
   // apiCalls.getAllData()
 }
