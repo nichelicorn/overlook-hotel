@@ -1,4 +1,6 @@
-import { testBookings } from '../test/test-data';
+import { testBookings, testRooms } from '../test/test-data';
+// refactor these methods to expect the API data when connected to the DOM
+// remove these when everything is connected in the scripts file
 
 class Guest {
   constructor(id, name) {
@@ -36,6 +38,14 @@ class Guest {
     // })
     this.allBookings = testBookings.filter(booking => {
       return this.id === booking.userID;
+    })
+  }
+
+  calcTotalSpent() {
+    console.log('this.allBookings <>>>', this.allBookings);
+
+    let nightlyCost = testRooms.map(room => { // need to get the booking first from this.allBookings
+      // if ()
     })
   }
 }
