@@ -10,6 +10,12 @@ import './images/turing-logo.png'
 
 // console.log('This is the JavaScript entry file - your code begins here.');
 
+// 🌐 Global Variables
+
+let allGuests, allRooms, allBookings;
+
+
+
 window.addEventListener('load', loadAPIData);
 console.log('apiCalls 👇');
 console.log(apiCalls);
