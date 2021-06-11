@@ -34,6 +34,10 @@ class Guest {
     //   console.log('this.allBookings <>>>', this.allBookings);
     //   return this.allBookings;
     // })
+    // need to refactor this to NOT include the test data
+    // run the methods in the test
+    // then test the data in the class
+    // 🤦‍♀️
     this.allBookings = testBookings.filter(booking => {
       return this.id === booking.userID;
     })
