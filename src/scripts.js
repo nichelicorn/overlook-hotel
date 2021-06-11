@@ -22,6 +22,11 @@ function loadAPIData() {
       console.log(allGuestData)
       // returns undefined if there are console.logs in apiCalls.getGuestData ; with all console.logs in api-calls this works to log guest data in the console from the scripts file; fetch is weird
     })
+  apiCalls.getRoomData()
+    .then(allRoomData => {
+      console.log('let\'s check out these rooms! 👇')
+      console.log(allRoomData)
+    })
   // console.log('allData 👇')
   // apiCalls.getAllData()
 }

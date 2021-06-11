@@ -8,6 +8,13 @@ const apiCalls = {
     .catch(err => console.log('Error 🧟 ', err))
   },
 
+  getRoomData() {
+    return fetch('http://localhost:3001/api/v1/rooms')
+      .then(response => response.json())
+      .then(allRoomData => { return allRoomData })
+      .catch(err => console.log('Error 🧟 : ', err))
+  }
+
   // const getRoomData = fetch('http://localhost:3001/api/v1/rooms')
   //   .then(response => response.json())
   //   // .then(allRoomData => console.log('Rooms', allRoomData))
@@ -29,12 +36,12 @@ const apiCalls = {
   //     // return data
   //   })
 
-  getAllData() {
-    let promises = [ apiCalls.getGuestData() ];
-    return Promise.all(promises)
-    .then(allData => { return allData })
-    .catch(error => console.log(`Error : 🧟 : ${error}`))
-  },
+  // getAllData() {
+  //   let promises = [ apiCalls.getGuestData() ];
+  //   return Promise.all(promises)
+  //   .then(allData => { return allData })
+  //   .catch(error => console.log(`Error : 🧟 : ${error}`))
+  // },
 
   // .catch(err => console.log('Error 🧟 ', err))
 }
