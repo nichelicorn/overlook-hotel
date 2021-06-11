@@ -53,41 +53,40 @@ describe.only('The Room', () => {
     })
 
     it.skip('should store the size of the bed', () => {
-
+      expect(room1.bedSize).to.be('full');
+      expect(room2.bedSize).to.be('queen');
+      expect(room3.bedSize).to.be('king');
     })
 
     it.skip('should store the bed size as a string', () => {
-
+      expect(room1.bedSize).to.be.a('string');
+      expect(room2.bedSize).to.be.a('string');
+      expect(room3.bedSize).to.be.a('string');
     })
 
     it.skip('should store the number of beds in the room', () => {
+      expect(room1.numBeds).to.be(1);
+      expect(room2.numBeds).to.be(1);
+      expect(room3.numBeds).to.be(2);
 
     })
 
     it.skip('store the number of beds as a number', () => {
-
+      expect(room1.numBeds).to.be.a('number');
+      expect(room2.numBeds).to.be.a('number');
+      expect(room3.numBeds).to.be.a('number');
     })
 
     it.skip('should store the cost per night', () => {
-
+      expect(room1.costPerNight).to.be(333.33);
+      expect(room2.costPerNight).to.be(444.44);
+      expect(room3.costPerNight).to.be(555.55);
     })
 
     it.skip('should store the cost per night as a number', () => {
-
+      expect(room1.costPerNight).to.be.a('number');
+      expect(room2.costPerNight).to.be.a('number');
+      expect(room3.costPerNight).to.be.a('number');
     })
-
-    // it.skip('should store all dates the room is booked', () => { // this is not in the API data
-    //
-    // })
-
-    // it.skip('should store the booked dates in an array', () => {
-    //
-    // })
-
-    // it.skip('should store the dates as strings', () => {
-    //
-    // })
-
   })
-
 })
