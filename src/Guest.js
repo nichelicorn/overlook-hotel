@@ -64,8 +64,10 @@ class Guest {
           // console.log('room in the bookings <>>>', room );
           // console.log('conditional <>>>', booking.roomNumber === room.number); // two `trues`
           booking['nightlyRoomCharge'] = room.costPerNight
-          console.log('booking <>>>', booking);
+          // console.log('booking <>>>', booking);
         }
+        console.log('this.allBookings <>>>', this.allBookings);
+        return this.allBookings;
       })
     })
 
