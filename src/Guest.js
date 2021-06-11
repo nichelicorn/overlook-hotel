@@ -55,7 +55,10 @@ class Guest {
       // add a new property to the object with the room cost per night
       if (booking.userID === this.id && booking.roomNumber === room.number) {
           // console.log('conditional <>>>', booking.roomNumber === room.number); // two `trues`
-          booking['nightlyRoomCharge'] = room.costPerNight
+          // Number.parseFloat(x).toFixed(2)
+          // booking['nightlyRoomCharge'] = Number.parseInt(room.costPerNight.toFixed(2));
+          booking['nightlyRoomCharge'] = room.costPerNight; // fix the rounding errors in the DOM
+          // booking['nightlyRoomCharge'] = parseInt(room.costPerNight.toFixed(2));
         }
         return this.allBookings;
       })
@@ -68,7 +71,7 @@ class Guest {
       // console.log('acc + roomCharge <>>>', acc + roomCharge);
       return acc + roomCharge;
     }, 0)
-    // console.log('accumulatedSpending <>>>', accumulatedSpending);
+    console.log('accumulatedSpending <>>>', accumulatedSpending);
     this.totalSpent = accumulatedSpending;
   }
 }
