@@ -3,13 +3,8 @@ const apiCalls = {
 
   getGuestData() {
     return fetch('http://localhost:3001/api/v1/customers')
-    // const getGuestData = fetch('http://localhost:3001/api/v1/customers')
     .then(response => response.json())
-    // .then(allGuestData => console.log('All Guests <>>>', allGuestData))
-    // logs an object `{customers : [50]}` ; comment out line 8
     .then(allGuestData => { return allGuestData })
-    // comment out console.logs and it works?!?!?! what the hell, fetch?!
-    // .then(allGuestData => console.log('2 <>>>', allGuestData)); // undefined ; line 8 commented out, now logs an object `{customers : [50]}`
     .catch(err => console.log('Error 🧟 ', err))
   },
 

@@ -20,7 +20,7 @@ function loadAPIData() {
     .then(allGuestData => {
       console.log('hello all guests!')
       console.log(allGuestData)
-      // still returns undefined ; with all console.logs in api-calls this works to log guest data in the console from the scripts file; fetch is weird
+      // returns undefined if there are console.logs in apiCalls.getGuestData ; with all console.logs in api-calls this works to log guest data in the console from the scripts file; fetch is weird
     })
   // console.log('allData 👇')
   // apiCalls.getAllData()
