@@ -38,41 +38,35 @@ const testRooms = [
 ]
 
 const testBookings = [
-  { id: "5fwrgu4i7k55hl6sz",
+  {
     userID: 3,
     date: "2020/10/31",
     roomNumber: 42,
-    roomServiceCharges: [],
   },
-  { id: "5fwrgu4i7k55hl6sz",
+  {
     userID: 3,
     date: "2021/10/31",
     roomNumber: 217,
-    roomServiceCharges: [],
   },
-  { id: "5fwrgu4i7k55hl6t6",
+  {
     userID: 7,
     date: "2020/10/31",
     roomNumber: 237,
-    roomServiceCharges: [],
   },
-  { id: "5fwrgu4i7k55hl6t7",
+  {
     userID: 7,
     date: "2021/10/31",
     roomNumber: 42,
-    roomServiceCharges: [],
   },
-  { id: "5fwrgu4i7k55hl6t8",
+  {
     userID: 13,
     date: "2020/10/31",
     roomNumber: 217,
-    roomServiceCharges: [],
   },
-  { id: "5fwrgu4i7k55hl6t9",
+  {
     userID: 13,
     date: "2021/10/31",
     roomNumber: 237,
-    roomServiceCharges: [],
   }
 ]
 
