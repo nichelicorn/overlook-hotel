@@ -5,6 +5,7 @@ class Guest {
     this.id = id;
     this.name = name;
     this.pastBookings = [];
+    this.allBookings = [];
     this.pendingBookings = [];
     this.futureBookings = [];
     this.totalSpent = 0;
@@ -23,13 +24,18 @@ class Guest {
     // all bookings will appear on pageload
     // the guest can make a selection on the dashboard to view past / future trips
     // this could be a DOM method that would then only display the data prior to / after the current date
-    let allBookings = testBookings.forEach(booking => {
-      // console.log('booking in question <>>>', booking.userID)
-      let bookingUserID = booking.userID;
-      if (this.id === bookingUserID) {
-        this.pendingBookings.push(booking);
-        console.log('pendingBookings <>>>', this.pendingBookings)
-      }
+    // this.allBookings = testBookings.filter(booking => {
+    //   // console.log('booking in question <>>>', booking.userID)
+    //   // let bookingUserID = booking.userID;
+    //   // if (this.id === booking.userID) {
+    //   //   this.allBookings.push(booking);
+    //   //   // console.log('allBookings <>>>', this.allBookings)
+    //   // }
+    //   console.log('this.allBookings <>>>', this.allBookings);
+    //   return this.allBookings;
+    // })
+    this.allBookings = testBookings.filter(booking => {
+      return this.id === booking.userID;
     })
   }
 }
