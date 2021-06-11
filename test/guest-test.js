@@ -176,7 +176,7 @@ describe.only('The Guest', () => {
       expect(guest3.totalSpent).to.equal(999.99);
     })
 
-    it.skip('should return zero if nothing has been spent', () => {
+    it('should return zero if nothing has been spent', () => {
       guest4.calcTotalSpent();
 
       expect(guest4.totalSpent).to.equal(0);

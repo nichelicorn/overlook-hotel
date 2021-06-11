@@ -71,7 +71,7 @@ class Guest {
       // console.log('acc + roomCharge <>>>', acc + roomCharge);
       return acc + roomCharge;
     }, 0)
-    console.log('accumulatedSpending <>>>', accumulatedSpending);
+    // console.log('accumulatedSpending <>>>', accumulatedSpending);
     this.totalSpent = accumulatedSpending;
   }
 }
