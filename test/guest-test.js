@@ -147,14 +147,6 @@ describe.only('The Guest', () => {
       // expect(guest1.futureBookings).to.deep.equal([booking2]);
     })
 
-    it.skip('should return bookings as an array of objects', () => {
-      guest2.viewAllBookings();
-
-      expect(guest2.allBookings).to.be.an.array.of('objects'); // not sure if this one will work; this did not work
-      // expect(guest2.pastBookings).to.be.an.array.of('objects');
-      // expect(guest2.futureBookings).to.be.an.array.of('objects');
-    })
-
     it.skip('should return an empty array if no bookings have been made', () => {
       guest4.viewAllBookings();
 
