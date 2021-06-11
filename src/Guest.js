@@ -9,7 +9,7 @@ class Guest {
     this.name = name;
     this.pastBookings = [];
     this.allBookings = [];
-    this.pendingBookings = [];
+    this.pendingBookings = []; // these will be submitted for approval to the Hotel; hotel will approve request if the room is available and create a new Booking object
     this.futureBookings = [];
     this.totalSpent = 0;
   }

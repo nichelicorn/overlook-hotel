@@ -50,7 +50,7 @@ describe.only('The Guest', () => {
       expect(guest3.name).to.be.a('string');
     })
 
-    it('should store past bookings', () => { // this property is not stored in the API
+    it('should store past bookings', () => {
       expect(guest1.pastBookings).to.deep.equal([]);
       expect(guest2.pastBookings).to.deep.equal([]);
       expect(guest3.pastBookings).to.deep.equal([]);
@@ -102,85 +102,61 @@ describe.only('The Guest', () => {
     //
     // })
 
-  describe('Guest methods', () => {
-    // Guest.requestBooking
-    // create new Booking object ?
-    // create a data object that can be used in the Hotel class to create a new booking? 👈 going to try this one first
-    it('should be able to request a new booking', () => {
-      guest1.requestBooking("2021/10/31", 217); // need to pass through the date and room number
+    describe('Guest methods', () => {
+      // Guest.requestBooking
+      it('should be able to request a new booking', () => {
+        guest1.requestBooking("2021/10/31", 217);
 
-      // add a Guest.constructor property for pendingBookings = [{}]
-      // expect(guest1.pendingBookings).to.deep.equal([{ // create a partial object
-      //   date: "2021/10/31",
-      //   roomNumber: 217
-      // }]);
-      expect(guest1.pendingBookings).to.deep.equal([{ // create the full data object
-        // id: "5fwrgu4i7k55hl6sz", // this seems like the least likely to come from the Guest class, and would need to be part of the new Booking object created in the Hotel class
-        userID: 3,
-        date: "2021/10/31",
-        roomNumber: 217,
-        // roomServiceCharges: [], // this is a default property of the Booking class; doesn't need to be set up in the object
-      }]);
+        expect(guest1.pendingBookings).to.deep.equal([{
+          userID: 3,
+          date: "2021/10/31",
+          roomNumber: 217,
+        }]);
+      })
+
+      // it.skip('should not be able to request a booking if no room number is included', () => { // this might be a DOM test
+      //   expect(guest4.requestBooking("2021/10/31")).to.equal('Please choose a room number');
+      // })
+      //
+      // it.skip('should not be able to request a booking if no date is selected', () => { // this might be a DOM test
+      //   expect(guest4.requestBooking(217)).to.equal('Please select a date for your stay at the Overlook Hotel');
+      // })
+
+      // Guest.viewAllBookings
+      it('should return all bookings', () => {
+        guest1.viewAllBookings();
+        guest2.viewAllBookings();
+        guest3.viewAllBookings();
+
+        expect(guest1.allBookings).to.deep.equal([booking1, booking2]);
+        expect(guest2.allBookings).to.deep.equal([booking3, booking4]);
+        expect(guest3.allBookings).to.deep.equal([booking5, booking6]);
+      })
+
+      it('should return an empty array if no bookings have been made', () => {
+        guest4.viewAllBookings();
+
+        expect(guest4.allBookings).to.deep.equal([]);
+      })
+
+      // Guest.calcTotalSpent
+      it('should return the total spent at the hotel', () => {
+        guest1.viewAllBookings();
+        guest3.viewAllBookings();
+
+
+        guest1.calcTotalSpent();
+        guest3.calcTotalSpent();
+
+        expect(guest1.totalSpent).to.equal(777.77);
+        expect(guest3.totalSpent).to.equal(999.99);
+      })
+
+      it('should return zero if nothing has been spent', () => {
+        guest4.calcTotalSpent();
+
+        expect(guest4.totalSpent).to.equal(0);
+      })
     })
-
-    it.skip('should not be able to request a booking if no room number is included', () => { // seems like this might be a DOM / fetch error handling issue rather than a class issue
-      expect(guest4.requestBooking("2021/10/31")).to.equal('Please choose a room number');
-    })
-
-    it.skip('should not be able to request a booking if no date is selected', () => { // seems like this might be a DOM / fetch error handling issue rather than a class issue
-      expect(guest4.requestBooking(217)).to.equal('Please select a date for your stay at the Overlook Hotel');
-    })
-
-    // Guest.viewAllBookings
-    // iterate through testBookings
-    // if the booking.userID === guest.id
-    // return the booking object to the correct array in the guest constructor
-    it('should return all bookings', () => {
-      guest1.viewAllBookings();
-      guest2.viewAllBookings();
-      guest3.viewAllBookings();
-
-      expect(guest1.allBookings).to.deep.equal([booking1, booking2]);
-      expect(guest2.allBookings).to.deep.equal([booking3, booking4]);
-      expect(guest3.allBookings).to.deep.equal([booking5, booking6]);
-      // expect(guest1.pastBookings).to.deep.equal([booking1]);
-      // expect(guest1.futureBookings).to.deep.equal([booking2]);
-    })
-
-    it('should return an empty array if no bookings have been made', () => {
-      guest4.viewAllBookings();
-
-      expect(guest4.allBookings).to.deep.equal([]);
-      // expect(guest4.futureBookings).to.deep.equal([]);
-      // expect(guest4.futureBookings).to.deep.equal([]);
-    })
-
-    // Guest.calcTotalSpent
-    // what data is needed to calculate the total amt spent?
-    // need room number
-    // need room cost per night
-    // need booking date // not sure this is needed, each object is one date, so would just need to count each object once on the cost per night
-    // need booking roomServiceCharges
-    // need data for allBookings
-    // 🙅‍♀️ need data for pastBookings
-    // 🙅‍♀️ need data for futureBookings
-    it('should return the total spent at the hotel', () => {
-      guest1.viewAllBookings();
-      guest3.viewAllBookings();
-
-
-      guest1.calcTotalSpent();
-      guest3.calcTotalSpent();
-
-      expect(guest1.totalSpent).to.equal(777.77);
-      expect(guest3.totalSpent).to.equal(999.99);
-    })
-
-    it('should return zero if nothing has been spent', () => {
-      guest4.calcTotalSpent();
-
-      expect(guest4.totalSpent).to.equal(0);
-    })
-  })
   })
 })
