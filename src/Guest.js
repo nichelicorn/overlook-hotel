@@ -45,33 +45,31 @@ class Guest {
   calcTotalSpent() {
     console.log('this.allBookings <>>>', this.allBookings);
     // add the costPerNight to the existing this.allBookings objects
-    let nightlyRoomCharge = testRooms.map(room => { // iterate through the rooms
+    let updateBooking = testRooms.map(room => { // iterate through the rooms
     // want the room roomNumber
     // want the costPerNight
-      // console.log('room <>>>', room);
-      // console.log('room.number <>>>', room.number);
-      // console.log('room.costPerNight <>>>', room.costPerNight);
       // console.log('if? <>>>', room.userID === this.id); // ah! i'm looking at the room! i think i'm looking for the booking
       let objAdjuster = this.allBookings.map(booking => {
       // now i am inside my bookings, and i want to add the room cost to the existing object
       // if the room number is found in the booking object
       // add a new property to the object with the room cost per night
-
-        // console.log('booking <>>>', booking);
-
-        if (booking.userID === this.id && booking.roomNumber === room.number) {
-          // console.log('we found a room!')
-          // console.log('room in the bookings <>>>', room );
+      if (booking.userID === this.id && booking.roomNumber === room.number) {
           // console.log('conditional <>>>', booking.roomNumber === room.number); // two `trues`
           booking['nightlyRoomCharge'] = room.costPerNight
-          // console.log('booking <>>>', booking);
         }
-        console.log('this.allBookings <>>>', this.allBookings);
         return this.allBookings;
       })
     })
-
-
+    // console.log('this.allBookings <>>>', this.allBookings);
+    // now i can do my calculation!
+    let accumulatedSpending = this.allBookings.reduce((acc, booking) => {
+      let roomCharge =  booking.nightlyRoomCharge;
+      // add var for roomServiceCharges here
+      console.log('acc + roomCharge <>>>', acc + roomCharge);
+      return acc + roomCharge;
+    }, 0)
+    console.log('accumulatedSpending <>>>', accumulatedSpending);
+    this.totalSpent = accumulatedSpending;
   }
 }
 
