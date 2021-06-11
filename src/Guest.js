@@ -43,7 +43,7 @@ class Guest {
   }
 
   calcTotalSpent() {
-    console.log('this.allBookings <>>>', this.allBookings);
+    // console.log('this.allBookings <>>>', this.allBookings);
     // add the costPerNight to the existing this.allBookings objects
     let updateBooking = testRooms.map(room => { // iterate through the rooms
     // want the room roomNumber
@@ -65,10 +65,10 @@ class Guest {
     let accumulatedSpending = this.allBookings.reduce((acc, booking) => {
       let roomCharge =  booking.nightlyRoomCharge;
       // add var for roomServiceCharges here
-      console.log('acc + roomCharge <>>>', acc + roomCharge);
+      // console.log('acc + roomCharge <>>>', acc + roomCharge);
       return acc + roomCharge;
     }, 0)
-    console.log('accumulatedSpending <>>>', accumulatedSpending);
+    // console.log('accumulatedSpending <>>>', accumulatedSpending);
     this.totalSpent = accumulatedSpending;
   }
 }
