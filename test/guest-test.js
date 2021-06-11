@@ -147,9 +147,10 @@ describe.only('The Guest', () => {
       // expect(guest1.futureBookings).to.deep.equal([booking2]);
     })
 
-    it.skip('should return an empty array if no bookings have been made', () => {
+    it('should return an empty array if no bookings have been made', () => {
       guest4.viewAllBookings();
 
+      expect(guest4.allBookings).to.deep.equal([]);
       // expect(guest4.futureBookings).to.deep.equal([]);
       // expect(guest4.futureBookings).to.deep.equal([]);
     })
