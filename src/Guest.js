@@ -4,9 +4,9 @@ import { testBookings, testRooms } from '../test/test-data';
 // reassign testBookings / testRooms to naming that will be used for the API data
 
 class Guest {
-  constructor(id, name) {
-    this.id = id;
-    this.name = name;
+  constructor(userData) {
+    this.id = userData.id;
+    this.name = userData.name;
     this.pastBookings = [];
     this.allBookings = [];
     this.pendingBookings = []; // these will be submitted for approval to the Hotel; hotel will approve request if the room is available and create a new Booking object
