@@ -10,7 +10,7 @@ import { testGuests, testRooms, testBookings } from '../test/test-data';
 
 describe.only('The Hotel', () => {
 
-  let hotel, guests, rooms;
+  let hotel, guests, rooms, bookings;
 
   beforeEach(() => {
     hotel = new Hotel();
