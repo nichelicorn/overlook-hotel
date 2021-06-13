@@ -26,6 +26,10 @@ class Hotel {
     })
   }
 
+  filterRoomsByType() {
+    
+  }
+
 }
 
 export default Hotel;

@@ -80,8 +80,10 @@ describe.only('The Hotel', () => {
     })
 
     // Hotel.filterRoomsByType
-    it.skip('should return all rooms by type', () => {
-      // expect(hotel.filterRoomsByType(['single room'])).to.deep.equal([room1]);
+    it('should return all rooms by type', () => {
+      hotel.createObjects(rooms);
+
+      expect(hotel.filterRoomsByType(['single room'])).to.deep.equal([room1]);
       // expect(hotel.filterRoomsByType['residential suite']).to.deep.equal([room3]);
     })
 
