@@ -1,6 +1,5 @@
 class Booking {
   constructor(bookingData) {
-    console.log('booking data <>>>', bookingData);
     this.id = bookingData.id;
     this.userID = bookingData.userID;
     this.date = bookingData.date;
