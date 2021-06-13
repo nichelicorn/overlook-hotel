@@ -2,6 +2,7 @@ import chai from 'chai';
 const expect = chai.expect;
 
 import Hotel from '../src/Hotel';
+import Guest from '../src/Guest';
 
 import { testGuests } from '../test/test-data';
 
@@ -56,8 +57,10 @@ describe.only('The Hotel', () => {
     // add it to the all.whatever array
     console.log('guests <>>>', guests);
       hotel.createObjects(guests);
+      // guests will come in as data objects matching the API
+      // will expect data pushed into hotel.allGuests to be a new instance of a guest
 
-      expect(hotel.allGuests).to.deep.equal(guests);
+      expect(hotel.allGuests[0]).to.be.an.instanceof(Guest);
     })
 
     it.skip('should store all Room data', () => {
