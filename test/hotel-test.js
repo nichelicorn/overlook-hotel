@@ -35,17 +35,35 @@ describe.skip('The Hotel', () => {
 
   describe('Hotel properties', () => {
 
-    it.skip('should initialize with an empty array to store Guest data', () => {
+    it('should initialize with an empty array to store Guest data', () => {
       expect(hotel.allGuests).to.deep.equal([]);
     })
 
-    it.skip('should initialize with an empty array to store Room data', () => {
+    it('should store all Guest data in an array', () => {
+      expect(hotel.allGuests).to.be.an('array');
+    })
+
+    it('should initialize with an empty array to store Room data', () => {
       expect(hotel.allRooms).to.deep.equal([]);
     })
 
-    it.skip('should initialize with an empty array to store Booking data', () => {
+    it('should store Room data in an array', () => {
+      expect(hotel.allRooms).to.be.an('array');
+    })
+
+    it('should initialize with an empty array to store Booking data', () => {
       expect(hotel.allBookings).to.deep.equal([]);
     })
+
+    it('should store all Booking data in an array', () => {
+      expect(hotel.allBookings).to.be.an('array');
+    })
+
+  })
+
+  describe('Hotel methods', () => {
+
+    // Hotel.createObjects
     // it('should store all Guest data', () => {
     // this will happen after the API data has been returned
     // make this a method
@@ -62,29 +80,13 @@ describe.skip('The Hotel', () => {
       // expect(hotel.allGuests).to.deep.equal(guests);
     // })
 
-    it.skip('should store all Guest data in an array', () => {
-      expect(hotel.allGuests).to.be.an('array');
-    })
-
     it.skip('should store all Room data', () => {
       expect(hotel.allRooms).to.deep.equal(rooms);
-    })
-
-    it.skip('should store Room data in an array', () => {
-      expect(hotel.allRooms).to.be.an('array');
     })
 
     it.skip('should store all Booking data', () => {
       expect(hotel.allBookings).to.deep.equal(bookings);
     })
-
-    it.skip('should store all Booking data in an array', () => {
-      expect(hotel.allBookings).to.be.an('array');
-    })
-
-  })
-
-  describe('Hotel methods', () => {
 
     // Hotel.filterRoomsByType
     it.skip('should return all rooms by type', () => {
