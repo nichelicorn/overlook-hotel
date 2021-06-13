@@ -73,7 +73,7 @@ describe.only('The Hotel', () => {
       expect(hotel.allGuests[0]).to.be.an.instanceof(Guest);
     })
 
-    it.skip('should create a new Room object if an array of rooms is passed through', () => {
+    it('should create a new Room object if an array of rooms is passed through', () => {
       hotel.createObjects(rooms);
 
       expect(hotel.allRooms[1]).to.be.an.instanceof(Room);

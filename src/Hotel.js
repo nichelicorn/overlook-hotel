@@ -25,6 +25,9 @@ class Hotel {
         // this is logging an array of objects
         let newObj = new Guest(element);
         this.allGuests.push(newObj);
+      } else if (label[0] === 'rooms') {
+        let newObj = new Room(element);
+        this.allRooms.push(newObj);
       }
     })
     // for each element in the array, create a new object based on the object's original label;
