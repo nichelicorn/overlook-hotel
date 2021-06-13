@@ -61,7 +61,7 @@ describe.only('The Hotel', () => {
     // hotel will review each piece of data
     // create a new instance of the appropriate object
     // add it to the all.whatever array
-    console.log('guests <>>>', guests);
+    // console.log('guests <>>>', guests);
       hotel.createObjects(guests);
       // guests will come in as data objects matching the API
       // will expect data pushed into hotel.allGuests to be a new instance of a guest
