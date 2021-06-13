@@ -6,7 +6,7 @@ import Guest from '../src/Guest';
 import Room from '../src/Room';
 import Booking from '../src/Booking';
 
-import { testGuests, testRooms } from '../test/test-data';
+import { testGuests, testRooms, testBookings } from '../test/test-data';
 
 describe.only('The Hotel', () => {
 
@@ -24,6 +24,7 @@ describe.only('The Hotel', () => {
 
     guests = { customers: [ testGuests[0], testGuests[1], testGuests[2], testGuests[3] ] };
     rooms = { rooms: [ testRooms[0], testRooms[1], testRooms[2] ] };
+    bookings = { bookings: [ testBookings[0], testBookings[1], testBookings[3], testBookings[4], testBookings[5], testBookings[6] ] };
   })
 
   describe('Hotel properties', () => {
