@@ -3,12 +3,15 @@ const expect = chai.expect;
 
 import Hotel from '../src/Hotel';
 
+import { testGuests } from '../test/test-data';
+
 describe.only('The Hotel', () => {
 
-  let hotel;
+  let hotel, guests;
 
   beforeEach(() => {
     hotel = new Hotel();
+    guests = [testGuests[0], testGuests[1], testGuests[2], testGuests[3]];
   })
 
   describe('Hotel properties', () => {
@@ -51,6 +54,7 @@ describe.only('The Hotel', () => {
     // hotel will review each piece of data
     // create a new instance of the appropriate object
     // add it to the all.whatever array
+    console.log('guests <>>>', guests);
       hotel.createObjects(guests);
 
       expect(hotel.allGuests).to.deep.equal(guests);
