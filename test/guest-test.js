@@ -31,7 +31,6 @@ describe('The Guest', () => {
   describe('Guest properties', () => {
 
     it('should store an id', () => {
-      console.log('guest1', guest1)
       expect(guest1.id).to.equal(3);
       expect(guest2.id).to.equal(7);
       expect(guest3.id).to.equal(13);

@@ -39,34 +39,46 @@ const testRooms = [
 
 const testBookings = [
   {
+    id: "pickle123",
     userID: 3,
     date: "2020/10/31",
     roomNumber: 42,
+    roomServiceCharges: []
   },
   {
+    id: "pickle234",
     userID: 3,
     date: "2021/10/31",
     roomNumber: 217,
+    roomServiceCharges: []
   },
   {
+    id: "pickle345",
     userID: 7,
     date: "2020/10/31",
     roomNumber: 237,
+    roomServiceCharges: []
   },
   {
+    id: "pickle456",
     userID: 7,
     date: "2021/10/31",
     roomNumber: 42,
+    roomServiceCharges: []
   },
   {
+    id: "pickle567",
     userID: 13,
     date: "2020/10/31",
     roomNumber: 217,
+    roomServiceCharges: []
   },
   {
+    id: "pickle678",
     userID: 13,
     date: "2021/10/31",
     roomNumber: 237,
+    roomServiceCharges: []
   }
 ]
 
