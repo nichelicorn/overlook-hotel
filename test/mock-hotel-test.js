@@ -12,7 +12,13 @@ describe.only('The Hotel', () => {
 
   beforeEach(() => {
     hotel = new Hotel();
-    guests = [testGuests[0], testGuests[1], testGuests[2], testGuests[3]];
+
+    // Object { customers: (50) […] }
+    // customers: Array(50) [ {…}, {…}, {…}, … ]
+    // <prototype>: Object { … }
+    // scripts.js:32
+
+    guests = { customers: [testGuests[0], testGuests[1], testGuests[2], testGuests[3]] };
   })
 
   describe('Hotel properties', () => {
