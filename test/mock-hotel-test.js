@@ -79,6 +79,12 @@ describe.only('The Hotel', () => {
       expect(hotel.allRooms[1]).to.be.an.instanceof(Room);
     })
 
+    it('should create a new Booking object if an array of bookings is passed through', () => {
+      hotel.createObjects(bookings);
+
+      expect(hotel.allBookings[4]).to.be.an.instanceof(Booking);
+    })
+
     it.skip('should store all Booking data', () => {
       // expect(hotel.allBookings).to.deep.equal(bookings);
     })
