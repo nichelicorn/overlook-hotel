@@ -9,17 +9,20 @@ import { testGuests } from '../test/test-data';
 
 describe.only('The Hotel', () => {
 
-  let hotel, guests;
+  let hotel, guests, rooms;
 
   beforeEach(() => {
     hotel = new Hotel();
 
     // Object { customers: (50) […] }
     // customers: Array(50) [ {…}, {…}, {…}, … ]
+    // rooms: Array(25) [ {…}, {…}, {…}, … ]
+    // bookings: Array(1004) [ {…}, {…}, {…}, … ]
     // <prototype>: Object { … }
     // scripts.js:32
 
-    guests = { customers: [testGuests[0], testGuests[1], testGuests[2], testGuests[3]] };
+    guests = { customers: [ testGuests[0], testGuests[1], testGuests[2], testGuests[3] ] };
+    rooms = { rooms: [ testRooms[0], testRooms[1], testRooms[2] ] };
   })
 
   describe('Hotel properties', () => {
@@ -71,6 +74,8 @@ describe.only('The Hotel', () => {
     })
 
     it.skip('should create a new Room object if an array of rooms is passed through', () => {
+      hotel.createObjects(rooms);
+
       expect(hotel.allRooms[1]).to.be.an.instanceof(Room);
     })
 
