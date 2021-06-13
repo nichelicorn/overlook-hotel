@@ -8,22 +8,6 @@ describe.only('The Hotel', () => {
   let hotel;
 
   beforeEach(() => {
-    // guest1 = new Guest(testGuests[0]);
-    // guest2 = new Guest(testGuests[1]);
-    // guest3 = new Guest(testGuests[2]);
-    // guest4 = new Guest(testGuests[3]);
-    // guests = [ guest1, guest2, guest3, guest4 ];
-    // room1 = new Room(testRooms[0]);
-    // room2 = new Room(testRooms[1]);
-    // room3 = new Room(testRooms[2]);
-    // rooms = [ room1, room2, room3 ];
-    // booking1 = new Booking(testBookings[0]);
-    // booking2 = new Booking(testBookings[1]);
-    // booking3 = new Booking(testBookings[2]);
-    // booking4 = new Booking(testBookings[3]);
-    // booking5 = new Booking(testBookings[4]);
-    // booking6 = new Booking(testBookings[5]);
-    // bookings = [ booking1, booking1, booking3, booking4, booking5, booking6 ];
     hotel = new Hotel();
   })
 
