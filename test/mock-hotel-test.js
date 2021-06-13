@@ -24,7 +24,7 @@ describe.only('The Hotel', () => {
 
     guests = { customers: [ testGuests[0], testGuests[1], testGuests[2], testGuests[3] ] };
     rooms = { rooms: [ testRooms[0], testRooms[1], testRooms[2] ] };
-    bookings = { bookings: [ testBookings[0], testBookings[1], testBookings[3], testBookings[4], testBookings[5], testBookings[6] ] };
+    bookings = { bookings: [ testBookings[0], testBookings[1], testBookings[2], testBookings[3], testBookings[4], testBookings[5] ] };
   })
 
   describe('Hotel properties', () => {
@@ -84,7 +84,7 @@ describe.only('The Hotel', () => {
     it('should create a new Booking object if an array of bookings is passed through', () => {
       hotel.createObjects(bookings);
 
-      expect(hotel.allBookings[4]).to.be.an.instanceof(Booking);
+      expect(hotel.allBookings[3]).to.be.an.instanceof(Booking);
     })
 
     it.skip('should store all Booking data', () => {
