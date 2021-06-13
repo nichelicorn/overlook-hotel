@@ -79,10 +79,6 @@ describe.only('The Hotel', () => {
       expect(hotel.allBookings[3]).to.be.an.instanceof(Booking);
     })
 
-    it.skip('should store all Booking data', () => {
-      // expect(hotel.allBookings).to.deep.equal(bookings);
-    })
-
     // Hotel.filterRoomsByType
     it.skip('should return all rooms by type', () => {
       // expect(hotel.filterRoomsByType(['single room'])).to.deep.equal([room1]);
