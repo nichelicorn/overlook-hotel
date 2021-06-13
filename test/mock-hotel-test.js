@@ -5,7 +5,7 @@ import Hotel from '../src/Hotel';
 import Guest from '../src/Guest';
 import Room from '../src/Room';
 
-import { testGuests } from '../test/test-data';
+import { testGuests, testRooms } from '../test/test-data';
 
 describe.only('The Hotel', () => {
 
