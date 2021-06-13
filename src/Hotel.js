@@ -5,6 +5,9 @@ class Hotel {
     this.allBookings = [];
   }
 
+  createObjects(array) {
+    
+  }
 
 }
 
