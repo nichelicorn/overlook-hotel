@@ -3,6 +3,7 @@ const expect = chai.expect;
 
 import Hotel from '../src/Hotel';
 import Guest from '../src/Guest';
+import Room from '../src/Room';
 
 import { testGuests } from '../test/test-data';
 
@@ -52,7 +53,7 @@ describe.only('The Hotel', () => {
   describe('Hotel methods', () => {
 
     // Hotel.createObjects
-    it('should store all Guest data', () => {
+    it('should create a new Guest object if an array of customers is passed through', () => {
     // this will happen after the API data has been returned
     // make this a method
     // class will initialize with empty array
@@ -69,8 +70,8 @@ describe.only('The Hotel', () => {
       expect(hotel.allGuests[0]).to.be.an.instanceof(Guest);
     })
 
-    it.skip('should store all Room data', () => {
-      // expect(hotel.allRooms).to.deep.equal(rooms);
+    it.skip('should create a new Room object if an array of rooms is passed through', () => {
+      expect(hotel.allRooms[1]).to.be.an.instanceof(Room);
     })
 
     it.skip('should store all Booking data', () => {
