@@ -1,15 +1,10 @@
 import chai from 'chai';
 const expect = chai.expect;
 
-// import Guest from '../src/Guest';
-// import Room from '../src/Room';
-// import Booking from '../src/Booking';
-import Hotel from '../src/Booking';
-// import { testGuests, testUsers , testRooms, testBookings } from '../test/test-data';
+import Hotel from '../src/Hotel';
 
-describe.skip('The Hotel', () => {
+describe.only('The Hotel', () => {
 
-  // let guest1, guest2, guest3, guest4, guests, room1, room2, room3, rooms,  booking1, booking2, booking3, booking4, booking5, booking6, bookings, hotel;
   let hotel;
 
   beforeEach(() => {
