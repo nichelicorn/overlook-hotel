@@ -42,21 +42,19 @@ describe.only('The Hotel', () => {
   describe('Hotel methods', () => {
 
     // Hotel.createObjects
-    // it('should store all Guest data', () => {
+    it('should store all Guest data', () => {
     // this will happen after the API data has been returned
     // make this a method
     // class will initialize with empty array
-      // console.log('hotel.allGuests <>>>', hotel.allGuests);
-      // console.log('guests <>>>', guests)
-      // i think the hotel will need to be instantiating each new guest / room / booking
-      // api data comes in
-      // hotel will review each piece of data
-      // create a new instance of the appropriate object
-      // add it to the all.whatever array
+    // i think the hotel will need to be instantiating each new guest / room / booking
+    // api data comes in
+    // hotel will review each piece of data
+    // create a new instance of the appropriate object
+    // add it to the all.whatever array
+      hotel.createObjects(guests);
 
-
-      // expect(hotel.allGuests).to.deep.equal(guests);
-    // })
+      expect(hotel.allGuests).to.deep.equal(guests);
+    })
 
     it.skip('should store all Room data', () => {
       // expect(hotel.allRooms).to.deep.equal(rooms);
