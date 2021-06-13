@@ -25,8 +25,6 @@ describe.only('The Hotel', () => {
     // booking6 = new Booking(testBookings[5]);
     // bookings = [ booking1, booking1, booking3, booking4, booking5, booking6 ];
     hotel = new Hotel();
-
-
   })
 
   describe('Hotel properties', () => {
