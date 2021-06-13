@@ -34,6 +34,18 @@ describe.skip('The Hotel', () => {
   })
 
   describe('Hotel properties', () => {
+
+    it.skip('should initialize with an empty array to store Guest data', () => {
+      expect(hotel.allGuests).to.deep.equal([]);
+    })
+
+    it.skip('should initialize with an empty array to store Room data', () => {
+      expect(hotel.allRooms).to.deep.equal([]);
+    })
+
+    it.skip('should initialize with an empty array to store Booking data', () => {
+      expect(hotel.allBookings).to.deep.equal([]);
+    })
     // it('should store all Guest data', () => {
     // this will happen after the API data has been returned
     // make this a method
