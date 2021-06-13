@@ -9,7 +9,7 @@ import { testGuests, testUsers , testRooms, testBookings } from '../test/test-da
 
 describe.skip('The Hotel', () => {
 
-  let guest1, guest2, guest3, guest4, guests, room1, room2, room3, rooms,  booking1, booking2, booking3, booking4, booking5, booking6, bookings, hotel;
+  // let guest1, guest2, guest3, guest4, guests, room1, room2, room3, rooms,  booking1, booking2, booking3, booking4, booking5, booking6, bookings, hotel;
 
   beforeEach(() => {
     // guest1 = new Guest(testGuests[0]);
@@ -34,7 +34,10 @@ describe.skip('The Hotel', () => {
   })
 
   describe('Hotel properties', () => {
-    it('should store all Guest data', () => {
+    // it('should store all Guest data', () => {
+    // this will happen after the API data has been returned
+    // make this a method
+    // class will initialize with empty array
       // console.log('hotel.allGuests <>>>', hotel.allGuests);
       // console.log('guests <>>>', guests)
       // i think the hotel will need to be instantiating each new guest / room / booking
@@ -44,8 +47,8 @@ describe.skip('The Hotel', () => {
       // add it to the all.whatever array
 
 
-      expect(hotel.allGuests).to.deep.equal(guests);
-    })
+      // expect(hotel.allGuests).to.deep.equal(guests);
+    // })
 
     it.skip('should store all Guest data in an array', () => {
       expect(hotel.allGuests).to.be.an('array');
