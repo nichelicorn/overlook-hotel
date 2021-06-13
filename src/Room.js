@@ -1,11 +1,11 @@
 class Room {
-  constructor(number, type, bidet, bedSize, numBeds, costPerNight) {
-    this.number = number;
-    this.type = type;
-    this.bidet = bidet || false;
-    this.bedSize = bedSize;
-    this.numBeds = numBeds;
-    this.costPerNight = costPerNight;
+  constructor(roomData) {
+    this.number = roomData.number;
+    this.type = roomData.roomType;
+    this.bidet = roomData.bidet || false;
+    this.bedSize = roomData.bedSize;
+    this.numBeds = roomData.numBeds;
+    this.costPerNight = roomData.costPerNight;
   }
 }
 

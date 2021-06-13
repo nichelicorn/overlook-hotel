@@ -8,9 +8,12 @@ describe('The Room', () => {
   let room1, room2, room3;
 
   beforeEach(() => {
-    room1 = new Room(testRooms[0].number, testRooms[0].roomType, testRooms[0].bidet, testRooms[0].bedSize, testRooms[0].numBeds, testRooms[0].costPerNight);
-    room2 = new Room(testRooms[1].number, testRooms[1].roomType, testRooms[1].bidet, testRooms[1].bedSize, testRooms[1].numBeds, testRooms[1].costPerNight);
-    room3 = new Room(testRooms[2].number, testRooms[2].roomType, testRooms[2].bidet, testRooms[2].bedSize, testRooms[2].numBeds, testRooms[2].costPerNight);
+    room1 = new Room(testRooms[0]);
+    room2 = new Room(testRooms[1]);
+    room3 = new Room(testRooms[2]);
+    // room1 = new Room(testRooms[0].number, testRooms[0].roomType, testRooms[0].bidet, testRooms[0].bedSize, testRooms[0].numBeds, testRooms[0].costPerNight);
+    // room2 = new Room(testRooms[1].number, testRooms[1].roomType, testRooms[1].bidet, testRooms[1].bedSize, testRooms[1].numBeds, testRooms[1].costPerNight);
+    // room3 = new Room(testRooms[2].number, testRooms[2].roomType, testRooms[2].bidet, testRooms[2].bedSize, testRooms[2].numBeds, testRooms[2].costPerNight);
   })
 
   // Room.constructor
