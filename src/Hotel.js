@@ -1,4 +1,5 @@
 import Guest from '../src/Guest';
+import Room from '../src/Room';
 
 class Hotel {
   constructor() {
@@ -21,7 +22,7 @@ class Hotel {
       // console.log('label <>>>', label); // this is an array
       console.log('label[0] <>>>', label[0]);
       if (label[0] === 'customers') {
-        console.log('customer obj <>>>', element);
+        // console.log('customer obj <>>>', element);
         // this is logging an array of objects
         let newObj = new Guest(element);
         this.allGuests.push(newObj);
