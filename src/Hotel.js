@@ -26,8 +26,16 @@ class Hotel {
     })
   }
 
-  filterRoomsByType() {
-    
+  filterRoomsByType(rooms) {
+    return this.allRooms.filter(room => {
+      // console.log('filter results <>>>', room.type.includes(rooms)); // returns a boolean
+      // console.log('room.type.includes(rooms) <>>>', room.type.includes(rooms)); // returns a boolean
+      // console.log('filter results <>>>',       room.type.includes(rooms) ? room : 'That room is not available');
+      return room.type.includes(rooms) ? room : 'That room is not available';
+      // return room.type.includes(rooms);
+    })
+    console.log('filteredRooms <>>>', filteredRooms);
+    // return filteredRooms;
   }
 
 }
