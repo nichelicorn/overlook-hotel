@@ -33,12 +33,30 @@ class Hotel {
   }
 
   viewAvailRooms(date) {
+
+    // what are we trying to do here?
+
+    // we will receive a date inquiry from a guest
+    // if a room IS NOT already booked on that day,
+    // return that room object
+    // if a room IS already booked on that day
+    // do not return that room object
+
+
+    if (room is not booked) {
+      add to availRooms array
+
+    if (no rooms are available the selected day) {
+      return a message to the guest
+    }
+
+
     console.log('date <>>>', date);
 
-    let availRooms = this.allRooms;
+    // let availRooms = this.allRooms;
 
 
-    let filteredBookings = this.allBookings.filter(booking => {
+    // let filteredBookings = this.allBookings.filter(booking => {
 
       // console.log('booking <>>>', booking);
       // console.log('booking.date <>>>', booking.date);
@@ -49,18 +67,20 @@ class Hotel {
       // if date === booking.date
       // remove the room number of that booking from availRooms
 
-      if (!(date === booking.date)) {
-        console.log('💁‍♀️ the room is available that day!')
-      } else {
-        console.log('🙅‍♀️ already booked');
-      }
+
+
+      // if (!(date === booking.date)) {
+        // console.log('💁‍♀️ the room is available that day!')
+      // } else {
+        // console.log('🙅‍♀️ already booked');
+      // }
 
       // return availRooms once the dates booked have been evaluated
 
-    })
+    // })
 
     // console.log('availRooms <>>>', availRooms);
-    return availRooms;
+    // return availRooms;
   }
 }
 
