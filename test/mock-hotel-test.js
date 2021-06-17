@@ -100,7 +100,7 @@ describe.only('The Hotel', () => {
       expect(hotel.viewAvailRooms('2021/12/31')).to.deep.equal([testRooms[0], testRooms[1], testRooms[2]]);
     })
 
-    it('should return a message if no rooms are available on the selected date', () => {
+    it.skip('should return a message if no rooms are available on the selected date', () => {
       hotel.createObjects(bookings);
       hotel.createObjects(rooms);
 
@@ -112,7 +112,7 @@ describe.only('The Hotel', () => {
     })
 
     // Hotel.createBooking
-    it.skip('should create a new booking when a valid selection has been made', () => {
+    it.skip('should crea te a new booking when a valid selection has been made', () => {
       // console.log('hotel <>>>', hotel)
       // guest will request a new booking
       // hotel will review guest pendingBookings

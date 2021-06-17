@@ -34,24 +34,59 @@ class Hotel {
 
   viewAvailRooms(date) {
 
+    let availRooms = [];
+
     // what are we trying to do here?
 
     // we will receive a date inquiry from a guest
     // if a room IS NOT already booked on that day,
-    // return that room object
+    // add that room to an array of objects to be returned
+
     // if a room IS already booked on that day
-    // do not return that room object
+    // do not add that room object to the array
+
+    // return the array
 
 
-    if (room is not booked) {
-      add to availRooms array
+    // if (room is not booked) {
+    //   add to availRooms array
+    //
+    // if (no rooms are available the selected day) {
+    //   return a message to the guest
+    // }
 
-    if (no rooms are available the selected day) {
-      return a message to the guest
-    }
+    // how can this be accomplished?
+
+    let roomSearch = this.allBookings.filter(booking => {
+      // compare dates booked to room numbers
+      // console.log('booking <>>>', booking);
+      let openRoom = this.allRooms.forEach(room => {
+        if (date === booking.date && room.number === booking.roomNumber) {
+          console.log('this room is booked on the selected date');
+        } else if (!(date === booking.date && room.number === booking.roomNumber) && !availRooms.includes(room)){
+          console.log('this room should be available');
+          availRooms.push(room); // an array with 18 objects
+          // only push unique rooms into the availRooms array
+
+        // if (!date === booking.date && room.number === booking.roomNumber && !availRooms.includes(room)) {
+        //   console.log('this room should be available');
+        //   availRooms.push(room)
+        }
 
 
-    console.log('date <>>>', date);
+        // }
+        // console.log('room <>>>', room);
+      })
+
+
+
+    })
+
+    console.log('availRooms <>>>', availRooms);
+    return availRooms;
+
+
+    // console.log('date <>>>', date);
 
     // let availRooms = this.allRooms;
 
