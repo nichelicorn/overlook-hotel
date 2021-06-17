@@ -33,27 +33,18 @@ class Hotel {
   }
 
   viewAvailRooms(date) {
-    // iterate through all booking objects
-    // if the booking date requested is found, remove that room number from available rooms for that date
-    // if the booking date requested is not found, return the room object
     let availRooms = this.allRooms;
-    // console.log('availRooms <>>>', availRooms);
-    // console.log('date <>>>', date);
     let filterResults = this.allBookings.filter(booking => {
-      // console.log('a booking <>>>', booking);
-      // console.log('a booking.date <>>>', booking.date);
       let bookingDate = booking.date;
       if (booking.date === date) {
-        console.log('🙅‍♀️ not available');
+        return 'We regret to say, there are no rooms available that evening';
       } else {
         return availRooms;
       }
     })
-    return availRooms;
-    // console.log('filterResults <>>>', filterResults);
-    // return filterResults;
-  }
 
+    return availRooms;
+  }
 }
 
 export default Hotel;

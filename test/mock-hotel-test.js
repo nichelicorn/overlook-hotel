@@ -100,8 +100,8 @@ describe.only('The Hotel', () => {
       expect(hotel.viewAvailRooms('2021/12/31')).to.deep.equal([testRooms[0], testRooms[1], testRooms[2]]);
     })
 
-    it.skip('should return a message if no rooms are available on the selected date', () => {
-      // expect(hotel.viewAvailRooms('2021/10/31')).to.equal('We regret to say, there are no rooms available that evening');
+    it('should return a message if no rooms are available on the selected date', () => {
+      expect(hotel.viewAvailRooms('2021/10/31')).to.equal('We regret to say, there are no rooms available that evening');
     })
 
     it.skip('should not return rooms that have been booked on the selected date', () => {
