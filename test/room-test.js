@@ -3,7 +3,7 @@ const expect = chai.expect;
 import { testRooms } from '../test/test-data';
 import Room from '../src/Room';
 
-describe('The Room', () => {
+describe.only('The Room', () => {
 
   let room1, room2, room3;
 
@@ -32,15 +32,15 @@ describe('The Room', () => {
     })
 
     it('should store a room type', () => {
-      expect(room1.type).to.equal('single room');
-      expect(room2.type).to.equal('suite');
-      expect(room3.type).to.equal('residential suite');
+      expect(room1.roomType).to.equal('single room');
+      expect(room2.roomType).to.equal('suite');
+      expect(room3.roomType).to.equal('residential suite');
     })
 
     it('should store the room type as a string', () => {
-      expect(room1.type).to.be.a('string');
-      expect(room2.type).to.be.a('string');
-      expect(room3.type).to.be.a('string');
+      expect(room1.roomType).to.be.a('string');
+      expect(room2.roomType).to.be.a('string');
+      expect(room3.roomType).to.be.a('string');
     })
 
     it('should know if the room has a bidet', () => {
