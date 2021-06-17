@@ -80,15 +80,19 @@ describe.only('The Hotel', () => {
     })
 
     // Hotel.filterRoomsByType
-    it('should return all rooms by type', () => {
+    it.only('should return all rooms by type', () => {
       hotel.createObjects(rooms);
 
+      // console.log('typeof [testRooms[0]]', typeof testRooms[0]); // object
+      console.log('[testRooms[0]] <>>>', [testRooms[0]]);
+      // expect(hotel.filterRoomsByType(['single room'])).to.deep.equal(testRoom);
       expect(hotel.filterRoomsByType(['single room'])).to.deep.equal([testRooms[0]]);
-      // expect(hotel.filterRoomsByType['residential suite']).to.deep.equal([room3]);
     })
 
-    it.skip('should not return room types that have not been selected', () => {
-      // expect(hotel.filterRoomsByType(['suite'])).to.deep.equal([room1, room2]);
+    it('should not return room types that have not been selected', () => {
+      hotel.createObjects(rooms);
+
+      expect(hotel.filterRoomsByType(['suite'])).to.deep.equal([testRooms[1], testRooms[2]]);
     })
 
     // Hotel.viewAvailRooms
