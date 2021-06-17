@@ -82,7 +82,7 @@ class Hotel {
 
     })
 
-    console.log('availRooms <>>>', availRooms);
+    // console.log('availRooms <>>>', availRooms);
     return availRooms;
 
 
