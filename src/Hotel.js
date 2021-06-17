@@ -33,22 +33,33 @@ class Hotel {
   }
 
   viewAvailRooms(date) {
-    // let availRooms = this.allRooms;
-    let availRooms = [];
-    let filterResults = this.allBookings.filter(booking => {
-      // let bookingDate = booking.date;
-      if (booking.date === date) {
-        console.log('booking date <>>>', bookingDate)
-        // console.log('if stmt availRooms <>>>', availRooms);
+    console.log('date <>>>', date);
 
-        // return 'We regret to say, there are no rooms available that evening';
+    let availRooms = this.allRooms;
+
+
+    let filteredBookings = this.allBookings.filter(booking => {
+
+      // console.log('booking <>>>', booking);
+      // console.log('booking.date <>>>', booking.date);
+      // console.log('booking.roomNumber <>>>', booking.roomNumber);
+
+      // if a room is booked on a particular date, remove it from availRooms
+
+      // if date === booking.date
+      // remove the room number of that booking from availRooms
+
+      if (!(date === booking.date)) {
+        console.log('💁‍♀️ the room is available that day!')
       } else {
-        console.log('does the if stmt even work? 🤨')
-        return availRooms;
+        console.log('🙅‍♀️ already booked');
       }
+
+      // return availRooms once the dates booked have been evaluated
+
     })
 
-    console.log('availRooms <>>>', availRooms);
+    // console.log('availRooms <>>>', availRooms);
     return availRooms;
   }
 }
