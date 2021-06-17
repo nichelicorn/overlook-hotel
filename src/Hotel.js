@@ -32,8 +32,11 @@ class Hotel {
     return filterResults;
   }
 
-  viewAvailRooms() {
-    
+  viewAvailRooms(date) {
+    console.log('date <>>>', date);
+    let filterResults = this.allBookings.filter(booking => {
+      console.log('a booking <>>>', booking);
+    })
   }
 
 }
