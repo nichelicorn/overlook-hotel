@@ -8,7 +8,7 @@ import Booking from '../src/Booking';
 
 import { testGuests, testRooms, testBookings } from '../test/test-data';
 
-describe.skip('The Hotel', () => {
+describe.only('The Hotel', () => {
 
   let hotel, guests, rooms, bookings;
 
