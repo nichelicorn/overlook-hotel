@@ -95,6 +95,7 @@ describe.only('The Hotel', () => {
     // Hotel.viewAvailRooms
     it('should return all rooms available on a selected date', () => {
       hotel.createObjects(bookings);
+      hotel.createObjects(rooms);
 
       expect(hotel.viewAvailRooms('2021/12/31')).to.deep.equal([testRooms[0], testRooms[1], testRooms[2]]);
     })

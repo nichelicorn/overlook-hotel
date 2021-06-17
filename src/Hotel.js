@@ -33,9 +33,14 @@ class Hotel {
   }
 
   viewAvailRooms(date) {
-    console.log('date <>>>', date);
+    // iterate through all booking objects
+    // if the booking date requested is found, remove that room number from available rooms for that date
+    // if the booking date requested is not found, return the room object
+    let availRooms = this.allRooms;
+    console.log('availRooms <>>>', availRooms);
+    // console.log('date <>>>', date);
     let filterResults = this.allBookings.filter(booking => {
-      console.log('a booking <>>>', booking);
+      // console.log('a booking <>>>', booking);
     })
   }
 
