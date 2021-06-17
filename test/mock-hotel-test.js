@@ -86,15 +86,15 @@ describe.only('The Hotel', () => {
       expect(hotel.filterRoomsByType(['single room'])).to.deep.equal([testRooms[0]]);
     })
 
-    it.skip('should not return room types that have not been selected', () => {
+    it('should not return room types that have not been selected', () => {
       hotel.createObjects(rooms);
 
       expect(hotel.filterRoomsByType(['suite'])).to.deep.equal([testRooms[1], testRooms[2]]);
     })
 
     // Hotel.viewAvailRooms
-    it.skip('should return all rooms available on a selected date', () => {
-      // expect(hotel.viewAvailRooms('2021/12/31')).to.deep.equal([room1, room2, room3]);
+    it('should return all rooms available on a selected date', () => {
+      expect(hotel.viewAvailRooms('2021/12/31')).to.deep.equal([testRooms[0], testRooms[1], testRooms[2]]);
     })
 
     it.skip('should return a message if no rooms are available on the selected date', () => {
