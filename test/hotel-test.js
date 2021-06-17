@@ -7,7 +7,7 @@ const expect = chai.expect;
 import Hotel from '../src/Booking';
 // import { testGuests, testUsers , testRooms, testBookings } from '../test/test-data';
 
-describe.only('The Hotel', () => {
+describe.skip('The Hotel', () => {
 
   // let guest1, guest2, guest3, guest4, guests, room1, room2, room3, rooms,  booking1, booking2, booking3, booking4, booking5, booking6, bookings, hotel;
   let hotel;
