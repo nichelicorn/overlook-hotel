@@ -32,6 +32,10 @@ class Hotel {
     return filterResults;
   }
 
+  viewAvailRooms() {
+    
+  }
+
 }
 
 export default Hotel;
