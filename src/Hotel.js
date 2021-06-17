@@ -27,20 +27,21 @@ class Hotel {
   }
 
   filterRoomsByType(filters) {
-    let filterResults = this.allRooms.filter(room => room.roomType.includes(filters));
+    let filteredRooms = this.allRooms.filter(room => room.roomType.includes(filters));
 
-    return filterResults;
+    return filteredRooms;
   }
 
   viewAvailRooms(date) {
     // let availRooms = this.allRooms;
     let availRooms = [];
     let filterResults = this.allBookings.filter(booking => {
-      let bookingDate = booking.date;
+      // let bookingDate = booking.date;
       if (booking.date === date) {
-        console.log('if stmt availRooms <>>>', availRooms);
+        console.log('booking date <>>>', bookingDate)
+        // console.log('if stmt availRooms <>>>', availRooms);
 
-        return 'We regret to say, there are no rooms available that evening';
+        // return 'We regret to say, there are no rooms available that evening';
       } else {
         console.log('does the if stmt even work? 🤨')
         return availRooms;
