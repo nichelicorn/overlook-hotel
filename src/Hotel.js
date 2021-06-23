@@ -32,7 +32,7 @@ class Hotel {
     return filteredRooms;
   }
 
-  viewAvailRooms(date, room) { // missing a ROOM for the booking 🤦‍♀️
+  viewAvailRooms(date, roomType) { // missing a ROOM for the booking 🤦‍♀️
     let availRooms = [];
     let roomSearch = this.allBookings.filter(booking => {
       let openRoom = this.allRooms.forEach(room => {
