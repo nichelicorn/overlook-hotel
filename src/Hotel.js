@@ -32,16 +32,17 @@ class Hotel {
     return filteredRooms;
   }
 
-  viewAvailRooms(date) {
+  viewAvailRooms(date, room) { // missing a ROOM for the booking 🤦‍♀️
     let availRooms = [];
     let roomSearch = this.allBookings.filter(booking => {
       let openRoom = this.allRooms.forEach(room => {
-        if (date === booking.date && room.number === booking.roomNumber) {
-          console.log(`Room no. ${room.number} is booked on the selected date`)
+        // if (date === booking.date || room.number === booking.roomNumber) { // if the date requested is already booked  OR the room number requested is already booked =>
+        if (date === booking.date && room.number === booking.roomNumber) { // if the date requested is already booked  AND the room number requested is already booked =>
+          console.log(`Room no. ${room.number} is booked on the selected date`);
         };
-        if (!availRooms.includes(room)) {
-          availRooms.push(room);
-        };
+        if (!availRooms.includes(room) && !(date === booking.date && room.number === booking.roomNumber)) { // if availRooms does NOT include the room  AND ( the date does not match the booking date  AND  the room.number does NOT match a booking for that date)
+          availRooms.push(room); // push the room into the array
+        }
         // if (!(date === booking.date && room.number === booking.roomNumber) && !availRooms.includes(room)) {
         //   console.log(`Room no. ${room.number} should be available`);
         //   availRooms.push(room);

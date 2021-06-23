@@ -93,7 +93,7 @@ describe.only('The Hotel', () => {
     })
 
     // Hotel.viewAvailRooms
-    it.only('should return all rooms available on a selected date', () => {
+    it('should return all rooms available on a selected date', () => {
       hotel.createObjects(bookings);
       hotel.createObjects(rooms);
 
