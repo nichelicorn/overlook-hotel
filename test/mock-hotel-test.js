@@ -107,7 +107,7 @@ describe.only('The Hotel', () => {
     //   // expect(hotel.viewAvailRooms('2021/10/31')).to.equal('We regret to say, there are no rooms available that evening');
     // })
 
-    it.skip('should not return rooms that have been booked on the selected date', () => {
+    it('should not return rooms that have been booked on the selected date', () => {
       expect(hotel.viewAvailRooms('2021/10/31')).to.deep.equal([]);
     })
 
