@@ -64,10 +64,14 @@ class Hotel {
         if (date === booking.date && room.number === booking.roomNumber) {
           console.log('this room is booked on the selected date');
           return 'We regret to say, there are no rooms available that evening';
-        } else if (!(date === booking.date && room.number === booking.roomNumber) && !availRooms.includes(room)){
+        } else if (!date === booking.date && !room.number === booking.roomNumber && !availRooms.includes(room)){
           console.log('this room should be available');
           availRooms.push(room); // an array with 18 objects
           // only push unique rooms into the availRooms array
+          // this is NOT only pushing unique rooms
+          // need to NOT push rooms in unless the conditions are all met
+
+        }
       })
     })
 
