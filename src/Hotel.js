@@ -57,10 +57,10 @@ class Hotel {
 
       let openRoom = this.allRooms.forEach(room => { // iterates through this.allRooms
         if (date === booking.date && room.number === booking.roomNumber) { // if date is strictly equal to booking, AND room number is strictly equal to booking room number
-          console.log('this room is booked on the selected date')};
+          console.log(`Room no. ${room.number} is booked on the selected date`)};
 
         if (!(date === booking.date && room.number === booking.roomNumber) && !availRooms.includes(room)) { // if date does NOT strictly equal booking date AND room number does NOT strictly equal roomNumber AND availRooms does not already include the room
-          console.log('this room should be available');
+          console.log(`Room no. ${room.number} should be available`);
           availRooms.push(room);
 
         }
@@ -69,7 +69,7 @@ class Hotel {
 
     })
 
-    console.log('availRooms <>>>', availRooms);
+    // console.log('availRooms <>>>', availRooms);
     return availRooms;
 
   }
