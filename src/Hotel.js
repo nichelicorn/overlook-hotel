@@ -37,12 +37,12 @@ class Hotel {
     let roomSearch = this.allBookings.filter(booking => {
       let openRoom = this.allRooms.forEach(room => {
         if (date === booking.date && room.number === booking.roomNumber) {
-          console.log(`Room no. ${room.number} is booked on the selected date`)};
-
-        if (!(date === booking.date && room.number === booking.roomNumber) && !availRooms.includes(room)) {
-          console.log(`Room no. ${room.number} should be available`);
-          availRooms.push(room);
+          console.log(`Room no. ${room.number} is booked on the selected date`)
         }
+        // if (!(date === booking.date && room.number === booking.roomNumber) && !availRooms.includes(room)) {
+        //   console.log(`Room no. ${room.number} should be available`);
+        //   availRooms.push(room);
+        // };
       })
     });
 
