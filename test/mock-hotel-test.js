@@ -146,7 +146,7 @@ describe.only('The Hotel', () => {
       })
     })
 
-    it.skip('should not create a new booking if all fields are not completed', () => {
+    it('should not create a new booking if all fields are not completed', () => {
       // this might be a DOM method - don't test these
     })
 
