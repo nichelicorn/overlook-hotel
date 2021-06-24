@@ -49,17 +49,9 @@ class Hotel {
   }
 
   createBooking(bookingObj) {
-
-    console.log('bookingObj <>>>', bookingObj);
-
     let newBooking = new Booking(bookingObj);
-
-    console.log('newBooking <>>>', newBooking);
-
     this.allBookings.push(newBooking);
-
   }
-
 }
 
 export default Hotel;
