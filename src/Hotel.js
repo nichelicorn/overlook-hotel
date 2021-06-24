@@ -47,13 +47,15 @@ class Hotel {
           console.log(`Room no. ${room.number} is booked on the selected date`);
         };
         if (!availRooms.includes(room) && !(date === booking.date && room.number === booking.roomNumber)) { // if availRooms does NOT include the room  AND ( the date does not match the booking date  AND  the room.number does NOT match a booking for that date)
-          availRooms.push(room); // push the room into the array
+          console.log(`Room no. ${room.number} should be available`);
+          // availRooms.push(room); // push the room into the array
         }
         // if (!(date === booking.date && room.number === booking.roomNumber) && !availRooms.includes(room)) {
         //   console.log(`Room no. ${room.number} should be available`);
         //   availRooms.push(room);
         // };
       })
+      console.log('openRoom <>>>', openRoom);
     });
 
     return availRooms;

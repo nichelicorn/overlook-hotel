@@ -41,13 +41,6 @@ const testRooms = [
     bedSize: "full",
     numBeds: 1,
     costPerNight: 333.33,
-  },
-  { number: 17,
-    roomType: "single room",
-    bidet: false,
-    bedSize: "full",
-    numBeds: 1,
-    costPerNight: 333.33,
   }
 ]
 
