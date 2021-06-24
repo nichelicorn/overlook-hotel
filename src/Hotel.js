@@ -41,6 +41,9 @@ class Hotel {
       // let openRoom = this.allRooms.forEach(room => {
         if (date === booking.date && room.number === booking.roomNumber) {
           console.log(`Room no. ${room.number} is booked on the selected date`);
+          // if the room is found to have a booking, remove it from the availRooms array
+          availRooms.shift(room);
+          // delete room from availRooms
         };
         if (!availRooms.includes(room) && !(date === booking.date && room.number === booking.roomNumber)) {
           console.log(`Room no. ${room.number} should be available`);
