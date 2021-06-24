@@ -8,7 +8,7 @@ import Booking from '../src/Booking';
 
 import { testGuests, testRooms, testBookings } from '../test/test-data';
 
-describe.only('The Hotel', () => {
+describe('The Hotel', () => {
 
   let hotel, guests, rooms, bookings;
 
@@ -109,7 +109,7 @@ describe.only('The Hotel', () => {
     })
 
     // Hotel.createBooking
-    it.skip('should crea te a new booking when a valid selection has been made', () => {
+    it('should create a new booking when a valid selection has been made', () => {
       // console.log('hotel <>>>', hotel)
       // guest will request a new booking
       // hotel will review guest pendingBookings
@@ -117,9 +117,11 @@ describe.only('The Hotel', () => {
       // create a new Booking object
       // if the room is not available
       // return a message to the guests and request they update their booking request
-      // guest1.requestBooking('2020/12/31', 217);
+      guest1.requestBooking('2020/12/31', 217);
 
-      // hotel.createBooking();
+      hotel.createBooking();
+
+
       // expect() // the last item in hotel.allBookings to equal { new booking object }
     })
 

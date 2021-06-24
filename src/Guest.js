@@ -20,6 +20,8 @@ class Guest {
     newBookingObj['roomNumber'] = room;
     newBookingObj['userID'] = this.id;
     this.pendingBookings.push(newBookingObj);
+
+    return newBookingObj;
   }
 
   viewAllBookings() {
