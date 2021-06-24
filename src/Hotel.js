@@ -56,6 +56,8 @@ class Hotel {
 
     console.log('newBooking <>>>', newBooking);
 
+    this.allBookings.push(newBooking);
+
   }
 
 }

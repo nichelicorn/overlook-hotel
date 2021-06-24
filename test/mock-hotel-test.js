@@ -122,7 +122,7 @@ describe.only('The Hotel', () => {
 
       // console.log('guest before booking req <>>>', hotel.allGuests[0]);
 
-      hotel.allGuests[0].requestBooking('2020/12/31', 217);
+      hotel.allGuests[0].requestBooking('2021/12/31', 217);
 
       // let obj = {
       //   date: '2020/12/31',
@@ -138,7 +138,7 @@ describe.only('The Hotel', () => {
       hotel.createBooking(obj);
 
       expect(hotel.allBookings[6]).to.deep.equal({
-        id: "pickle789",
+        id: undefined,
         userID: 3,
         date: "2021/12/31",
         roomNumber: 217,
