@@ -89,4 +89,4 @@ const testBookings = [
   }
 ]
 
-export { testGuests , testRooms, testBookings }
+export { testGuests, testRooms, testBookings }
