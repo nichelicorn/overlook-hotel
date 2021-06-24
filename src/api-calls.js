@@ -1,4 +1,3 @@
-// const apiCalls = () => {
 const apiCalls = {
 
   getGuestData() {
@@ -28,16 +27,6 @@ const apiCalls = {
     .then(allData => { return allData })
     .catch(err => console.log('Error 🧟 : ', err))
   },
-  // return Promise.all([allGuestData, allRoomData, allBookingData])
-  //   .then(data => {
-  //     // const allData = data
-  //     const allData = {}
-  //     allData.allGuestData = data[0]
-  //     allData.allRoomData = data[1]
-  //     allData.allBookingData = data[2]
-  //     return allData
-  //     // return data
-  //   })
 }
 
 export default apiCalls;
