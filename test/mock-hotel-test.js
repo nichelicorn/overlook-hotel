@@ -110,14 +110,24 @@ describe.only('The Hotel', () => {
 
     // Hotel.createBooking
     it('should create a new booking when a valid selection has been made', () => {
-      // console.log('hotel <>>>', hotel)
       // guest will request a new booking
       // hotel will review guest pendingBookings
       // if the room in the pendingBookings is available
       // create a new Booking object
       // if the room is not available
       // return a message to the guests and request they update their booking request
-      guest1.requestBooking('2020/12/31', 217);
+      hotel.createObjects(guests);
+      hotel.createObjects(rooms);
+      hotel.createObjects(bookings);
+      // console.log('hotel <>>>', hotel);
+      console.log('hotel.allGuests[0] <>>>', hotel.allGuests[0]);
+      hotel.allGuests[0].requestBooking('2020/12/31', 217);
+
+      let obj = {
+        date: '2020/12/31',
+        roomNumber: 217,
+        userID: 3
+      }
 
       hotel.createBooking(obj);
 
