@@ -101,7 +101,7 @@ describe.only('The Hotel', () => {
       expect(hotel.viewAvailRooms('2021/12/31', 'single room')).to.deep.equal([testRooms[0], testRooms[3]]);
     })
 
-    it.only('should not return rooms that have been booked on the selected date', () => {
+    it('should not return rooms that have been booked on the selected date', () => {
       hotel.createObjects(bookings);
       hotel.createObjects(rooms);
 

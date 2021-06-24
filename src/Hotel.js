@@ -34,7 +34,7 @@ class Hotel {
 
   viewAvailRooms(date, roomType) {
     let availRooms = this.filterRoomsByType(roomType);
-    console.log('filtered rooms <>>>', availRooms);
+    // console.log('filtered rooms <>>>', availRooms);
     // let availRooms = [];
     let roomSearch = this.allBookings.filter(booking => {
       let openRoom = availRooms.forEach(room => {
@@ -43,16 +43,15 @@ class Hotel {
           console.log(`Room no. ${room.number} is booked on the selected date`);
           // if the room is found to have a booking, remove it from the availRooms array
           availRooms.shift(room);
-          // delete room from availRooms
         };
         if (!availRooms.includes(room) && !(date === booking.date && room.number === booking.roomNumber)) {
           console.log(`Room no. ${room.number} should be available`);
           // availRooms.push(room); // push the room into the array
         }
       })
-      console.log('openRoom <>>>', openRoom);
+      // console.log('openRoom <>>>', openRoom);
     });
-    console.log('availRooms after the ifs <>>>', availRooms); // if the room is found to have a booking, remove it from the availRooms array
+    // console.log('availRooms after the ifs <>>>', availRooms); // if the room is found to have a booking, remove it from the availRooms array
     return availRooms;
   }
 
