@@ -8,7 +8,7 @@ import Booking from '../src/Booking';
 
 import { testGuests, testRooms, testBookings } from '../test/test-data';
 
-describe('The Hotel', () => {
+describe.only('The Hotel', () => {
 
   let hotel, guests, rooms, bookings;
 
@@ -119,9 +119,15 @@ describe('The Hotel', () => {
       // return a message to the guests and request they update their booking request
       guest1.requestBooking('2020/12/31', 217);
 
-      hotel.createBooking();
+      hotel.createBooking(obj);
 
-
+      expect(hotel.allBookings[6]).to.deep.equal({
+          id: "pickle789",
+          userID: 3,
+          date: "2021/12/31",
+          roomNumber: 217,
+          roomServiceCharges: []
+        })
       // expect() // the last item in hotel.allBookings to equal { new booking object }
     })
 
