@@ -8,7 +8,7 @@ import Booking from '../src/Booking';
 
 import { testGuests, testRooms, testBookings } from '../test/test-data';
 
-describe.only('The Hotel', () => {
+describe('The Hotel', () => {
 
   let hotel, guests, rooms, bookings;
 
@@ -44,25 +44,13 @@ describe.only('The Hotel', () => {
     it('should store all Booking data in an array', () => {
       expect(hotel.allBookings).to.be.an('array');
     })
-
   })
 
   describe('Hotel methods', () => {
 
     // Hotel.createObjects
     it('should create a new Guest object if an array of customers is passed through', () => {
-    // this will happen after the API data has been returned
-    // make this a method
-    // class will initialize with empty array
-    // i think the hotel will need to be instantiating each new guest / room / booking
-    // api data comes in
-    // hotel will review each piece of data
-    // create a new instance of the appropriate object
-    // add it to the all.whatever array
-    // console.log('guests <>>>', guests);
       hotel.createObjects(guests);
-      // guests will come in as data objects matching the API
-      // will expect data pushed into hotel.allGuests to be a new instance of a guest
 
       expect(hotel.allGuests[0]).to.be.an.instanceof(Guest);
     })
@@ -110,30 +98,14 @@ describe.only('The Hotel', () => {
 
     // Hotel.createBooking
     it('should create a new booking when a valid selection has been made', () => {
-      // guest will request a new booking
-      // hotel will review guest pendingBookings
-      // if the room in the pendingBookings is available
-      // create a new Booking object
-      // if the room is not available
-      // return a message to the guests and request they update their booking request
       hotel.createObjects(guests);
       hotel.createObjects(rooms);
       hotel.createObjects(bookings);
 
-      // console.log('guest before booking req <>>>', hotel.allGuests[0]);
-
       hotel.allGuests[0].requestBooking('2021/12/31', 217);
-
-      // let obj = {
-      //   date: '2020/12/31',
-      //   roomNumber: 217,
-      //   userID: 3
-      // } // obj needs to represent the guest's requested booking
 
       let obj = hotel.allGuests[0].pendingBookings[0];
       console.log('obj <>>>', obj);
-
-      // console.log('guest after booking req <>>>', hotel.allGuests[0]);
 
       hotel.createBooking(obj);
 
@@ -146,10 +118,6 @@ describe.only('The Hotel', () => {
       })
     })
 
-    it('should not create a new booking if all fields are not completed', () => {
-      // this might be a DOM method - don't test these
-    })
-
     // it.skip('should allow a user to log in', () => {
     //
     // })
@@ -157,5 +125,6 @@ describe.only('The Hotel', () => {
     // it.skip('should not grant log in access if credentials are invalid', () => {
     //
     // })
+
   })
 })
