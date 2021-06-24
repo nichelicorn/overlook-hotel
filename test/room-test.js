@@ -8,9 +8,12 @@ describe('The Room', () => {
   let room1, room2, room3;
 
   beforeEach(() => {
-    room1 = new Room(testRooms[0].number, testRooms[0].roomType, testRooms[0].bidet, testRooms[0].bedSize, testRooms[0].numBeds, testRooms[0].costPerNight);
-    room2 = new Room(testRooms[1].number, testRooms[1].roomType, testRooms[1].bidet, testRooms[1].bedSize, testRooms[1].numBeds, testRooms[1].costPerNight);
-    room3 = new Room(testRooms[2].number, testRooms[2].roomType, testRooms[2].bidet, testRooms[2].bedSize, testRooms[2].numBeds, testRooms[2].costPerNight);
+    room1 = new Room(testRooms[0]);
+    room2 = new Room(testRooms[1]);
+    room3 = new Room(testRooms[2]);
+    // room1 = new Room(testRooms[0].number, testRooms[0].roomType, testRooms[0].bidet, testRooms[0].bedSize, testRooms[0].numBeds, testRooms[0].costPerNight);
+    // room2 = new Room(testRooms[1].number, testRooms[1].roomType, testRooms[1].bidet, testRooms[1].bedSize, testRooms[1].numBeds, testRooms[1].costPerNight);
+    // room3 = new Room(testRooms[2].number, testRooms[2].roomType, testRooms[2].bidet, testRooms[2].bedSize, testRooms[2].numBeds, testRooms[2].costPerNight);
   })
 
   // Room.constructor
@@ -29,15 +32,15 @@ describe('The Room', () => {
     })
 
     it('should store a room type', () => {
-      expect(room1.type).to.equal('single room');
-      expect(room2.type).to.equal('suite');
-      expect(room3.type).to.equal('residential suite');
+      expect(room1.roomType).to.equal('single room');
+      expect(room2.roomType).to.equal('suite');
+      expect(room3.roomType).to.equal('residential suite');
     })
 
     it('should store the room type as a string', () => {
-      expect(room1.type).to.be.a('string');
-      expect(room2.type).to.be.a('string');
-      expect(room3.type).to.be.a('string');
+      expect(room1.roomType).to.be.a('string');
+      expect(room2.roomType).to.be.a('string');
+      expect(room3.roomType).to.be.a('string');
     })
 
     it('should know if the room has a bidet', () => {
