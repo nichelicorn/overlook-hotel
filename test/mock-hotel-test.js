@@ -105,7 +105,6 @@ describe('The Hotel', () => {
       hotel.allGuests[0].requestBooking('2021/12/31', 217);
 
       let obj = hotel.allGuests[0].pendingBookings[0];
-      console.log('obj <>>>', obj);
 
       hotel.createBooking(obj);
 
