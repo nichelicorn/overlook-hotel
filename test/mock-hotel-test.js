@@ -119,13 +119,21 @@ describe.only('The Hotel', () => {
       hotel.createObjects(guests);
       hotel.createObjects(rooms);
       hotel.createObjects(bookings);
+
+      // console.log('guest before booking req <>>>', hotel.allGuests[0]);
+
       hotel.allGuests[0].requestBooking('2020/12/31', 217);
 
-      let obj = {
-        date: '2020/12/31',
-        roomNumber: 217,
-        userID: 3
-      }
+      // let obj = {
+      //   date: '2020/12/31',
+      //   roomNumber: 217,
+      //   userID: 3
+      // } // obj needs to represent the guest's requested booking
+
+      let obj = hotel.allGuests[0].pendingBookings[0];
+      console.log('obj <>>>', obj);
+
+      // console.log('guest after booking req <>>>', hotel.allGuests[0]);
 
       hotel.createBooking(obj);
 
