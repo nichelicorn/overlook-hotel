@@ -48,6 +48,10 @@ class Hotel {
     return availRooms;
   }
 
+  createBooking(bookingObj) {
+    
+  }
+
 }
 
 export default Hotel;

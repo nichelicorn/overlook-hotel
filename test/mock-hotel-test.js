@@ -119,8 +119,6 @@ describe.only('The Hotel', () => {
       hotel.createObjects(guests);
       hotel.createObjects(rooms);
       hotel.createObjects(bookings);
-      // console.log('hotel <>>>', hotel);
-      console.log('hotel.allGuests[0] <>>>', hotel.allGuests[0]);
       hotel.allGuests[0].requestBooking('2020/12/31', 217);
 
       let obj = {
@@ -132,13 +130,12 @@ describe.only('The Hotel', () => {
       hotel.createBooking(obj);
 
       expect(hotel.allBookings[6]).to.deep.equal({
-          id: "pickle789",
-          userID: 3,
-          date: "2021/12/31",
-          roomNumber: 217,
-          roomServiceCharges: []
-        })
-      // expect() // the last item in hotel.allBookings to equal { new booking object }
+        id: "pickle789",
+        userID: 3,
+        date: "2021/12/31",
+        roomNumber: 217,
+        roomServiceCharges: []
+      })
     })
 
     it.skip('should not create a new booking if all fields are not completed', () => {
