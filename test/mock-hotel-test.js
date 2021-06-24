@@ -98,14 +98,14 @@ describe.only('The Hotel', () => {
       hotel.createObjects(rooms);
 
       expect(hotel.viewAvailRooms('2021/12/31', 'suite')).to.deep.equal([testRooms[1], testRooms[2]]);
-      // expect(hotel.viewAvailRooms('2021/12/31', 'single room')).to.deep.equal([testRooms[0]]);
+      expect(hotel.viewAvailRooms('2021/12/31', 'single room')).to.deep.equal([testRooms[0], testRooms[3]]);
     })
 
     it('should not return rooms that have been booked on the selected date', () => {
       hotel.createObjects(bookings);
       hotel.createObjects(rooms);
 
-      expect(hotel.viewAvailRooms('2021/10/31', 'single')).to.deep.equal([]);
+      expect(hotel.viewAvailRooms('2021/10/31', 'single room')).to.deep.equal([testRooms[3]]);
     })
 
     // Hotel.createBooking
