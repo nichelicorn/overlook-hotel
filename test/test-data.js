@@ -34,6 +34,20 @@ const testRooms = [
     bedSize: "king",
     numBeds: 2,
     costPerNight: 555.55,
+  },
+  { number: 17,
+    roomType: "single room",
+    bidet: false,
+    bedSize: "full",
+    numBeds: 1,
+    costPerNight: 333.33,
+  },
+  { number: 17,
+    roomType: "single room",
+    bidet: false,
+    bedSize: "full",
+    numBeds: 1,
+    costPerNight: 333.33,
   }
 ]
 

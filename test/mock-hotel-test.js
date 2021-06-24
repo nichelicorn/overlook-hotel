@@ -15,7 +15,7 @@ describe.only('The Hotel', () => {
   beforeEach(() => {
     hotel = new Hotel();
     guests = { customers: [ testGuests[0], testGuests[1], testGuests[2], testGuests[3] ] };
-    rooms = { rooms: [ testRooms[0], testRooms[1], testRooms[2] ] };
+    rooms = { rooms: [ testRooms[0], testRooms[1], testRooms[2], testRooms[3] ] };
     bookings = { bookings: [ testBookings[0], testBookings[1], testBookings[2], testBookings[3], testBookings[4], testBookings[5] ] };
   })
 
@@ -105,7 +105,7 @@ describe.only('The Hotel', () => {
       hotel.createObjects(bookings);
       hotel.createObjects(rooms);
 
-      expect(hotel.viewAvailRooms('2021/10/31', 'single room')).to.deep.equal([]);
+      expect(hotel.viewAvailRooms('2021/10/31', 'single')).to.deep.equal([]);
     })
 
     // Hotel.createBooking
