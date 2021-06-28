@@ -64,10 +64,13 @@ class Hotel {
 
     let id = Number(username.slice(8)); // this will work if the username starts with the string 'customer'
     // let id = Number(username.slice(-2)); // this will only work if the id is over two numbers;
-    console.log('id <>>>', id);
+    // console.log('id <>>>', id);
 
     this.activeUser = this.allGuests.filter(guest => {
-      console.log('guest id <>>>', guest.id);
+      // console.log('guest id <>>>', guest.id);
+      if (guest.id === id && guest.password === password) {
+        console.log('hello active user');
+      }
 
     });
 
