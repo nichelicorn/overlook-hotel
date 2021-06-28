@@ -52,6 +52,10 @@ class Hotel {
     let newBooking = new Booking(bookingObj);
     this.allBookings.push(newBooking);
   }
+
+  login(username, password) {
+    
+  }
 }
 
 export default Hotel;

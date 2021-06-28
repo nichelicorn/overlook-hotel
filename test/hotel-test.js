@@ -117,7 +117,8 @@ describe('The Hotel', () => {
       })
     })
 
-    it.skip('should allow a user to log in', () => {
+    // Hotel.login
+    it('should allow a user to log in', () => {
 
       // user will land on login page
       // user will input username and password
