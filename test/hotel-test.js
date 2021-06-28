@@ -119,19 +119,10 @@ describe('The Hotel', () => {
 
     // Hotel.login
     it('should allow a user to log in', () => {
-
-      // user will land on login page
-      // user will input username and password
-      // search through allGuests to find username that matches what was passed through
-
-      // if a guest is found with a matching username AND the password matches the guest's password
-
-      // reassign Hotel.activeUser to the logged in user
       hotel.createObjects(guests);
       hotel.login('customer13', 'overlook2021');
 
       expect(hotel.activeUser[0].id).to.equal(13);
-
     })
 
     // it.skip('should not grant log in access if credentials are invalid', () => {
