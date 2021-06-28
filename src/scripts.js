@@ -10,32 +10,33 @@ import apiCalls from './api-calls.js';
 // 🌐 Global Variables
 let hotel;
 
-// let allGuests, allRooms, allBookings;
+let guestData, roomData, bookingData;
 
 
 
 // window.addEventListener('load', loadAPIData);
 window.addEventListener('load', createHotel);
 
+function createHotel() {
+  // console.log('hello?')
+  hotel = new Hotel();
+  loadAPIData();
+  console.log('hotel <>>>', hotel);
+}
+
 function loadAPIData() {
   apiCalls.getAllData()
-    .then(allData => {
-      allGuests = allData[0];
-      allRooms = allData[1];
-      allBookings = allData[2];
-    }
-  )
-  setTimeout(logPickleData, 5000);
+  .then(allData => {
+    guestData = allData[0];
+    roomData = allData[1];
+    bookingData = allData[2];
+  }
+)
+setTimeout(logPickleData, 5000);
 }
 
 function logPickleData() {
-  console.log('pickle Guests <>>>', allGuests);
-  console.log('pickle Rooms <>>>', allRooms);
-  console.log('pickle Bookings <>>>', allBookings);
-}
-
-function createHotel() {
-  console.log('hello?')
-  hotel = new Hotel();
-  console.log('hotel <>>>', hotel);
+  console.log('pickle Guests <>>>', guestData);
+  console.log('pickle Rooms <>>>', roomData);
+  console.log('pickle Bookings <>>>', bookingData);
 }
