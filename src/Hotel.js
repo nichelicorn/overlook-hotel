@@ -56,6 +56,12 @@ class Hotel {
 
   login(username, password) {
 
+    console.log('this.activeUser <>>>', this.activeUser);
+    console.log('username <>>>', username);
+    console.log('password <>>>', password);
+    console.log('this.allGuests <>>>', this.allGuests);
+
+
   }
 }
 
