@@ -117,13 +117,12 @@ describe('The Hotel', () => {
       })
     })
 
-    // it.skip('should allow a user to log in', () => {
-    //
-    // })
+    // Hotel.login
+    it('should allow a user to log in', () => {
+      hotel.createObjects(guests);
+      hotel.login('customer13', 'overlook2021');
 
-    // it.skip('should not grant log in access if credentials are invalid', () => {
-    //
-    // })
-
+      expect(hotel.activeUser[0].id).to.equal(13);
+    })
   })
 })

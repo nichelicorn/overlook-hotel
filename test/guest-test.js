@@ -83,21 +83,29 @@ describe('The Guest', () => {
       expect(guest3.totalSpent).to.be.a('number');
     })
 
-    // it.skip('should store a user name', () => { // this will probably need a method to assign the username when the user is created on pageload
-    //
-    // })
+    it('should store a user name', () => { // this will probably need a method to assign the username when the user is created on pageload
+    expect(guest1.username).to.equal('customer3');
+    expect(guest2.username).to.equal('customer7');
+    expect(guest3.username).to.equal('customer13');
+    })
 
-    // it.skip('should store the user name as a string', () => {
-    //
-    // })
+    it('should store the user name as a string', () => {
+      expect(guest1.username).to.be.a('string');
+      expect(guest2.username).to.be.a('string');
+      expect(guest3.username).to.be.a('string');
+    })
 
-    // it.skip('should store a password', () => {
-    //
-    // })
+    it('should store a password', () => {
+      expect(guest1.password).to.equal('overlook2021');
+      expect(guest2.password).to.equal('overlook2021');
+      expect(guest3.password).to.equal('overlook2021');
+    })
 
-    // it.skip('should store the password as a string', () => {
-    //
-    // })
+    it('should store the password as a string', () => {
+      expect(guest1.password).to.be.a('string');
+      expect(guest2.password).to.be.a('string');
+      expect(guest3.password).to.be.a('string');    
+    })
 
     describe('Guest methods', () => {
       // Guest.requestBooking

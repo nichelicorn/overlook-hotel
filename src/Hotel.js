@@ -7,6 +7,7 @@ class Hotel {
     this.allGuests = [];
     this.allRooms = [];
     this.allBookings = [];
+    this.activeUser = null;
   }
 
   createObjects(largeObject) {
@@ -51,6 +52,15 @@ class Hotel {
   createBooking(bookingObj) {
     let newBooking = new Booking(bookingObj);
     this.allBookings.push(newBooking);
+  }
+
+  login(username, password) {
+    let id = Number(username.slice(8));
+    this.activeUser = this.allGuests.filter(guest => {
+      if (guest.id === id && guest.password === password) {
+        return guest;
+      }
+    });
   }
 }
 
