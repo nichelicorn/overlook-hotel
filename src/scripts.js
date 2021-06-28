@@ -37,18 +37,25 @@ function loadAPIData() {
 }
 
 function logPickleData() {
-  console.log('pickle Guests <>>>', guestData);
-  console.log('pickle Rooms <>>>', roomData);
-  console.log('pickle Bookings <>>>', bookingData);
-  console.log('pickle guestData <>>>', guestData);
+  // console.log('pickle Guests <>>>', guestData);
+  // console.log('pickle Rooms <>>>', roomData);
+  // console.log('pickle Bookings <>>>', bookingData);
+  // console.log('pickle guestData <>>>', guestData);
   hotel.createObjects(guestData);
   hotel.createObjects(roomData);
   hotel.createObjects(bookingData);
-  console.log('pickled hotel <>>>', hotel);
+  // console.log('pickled hotel <>>>', hotel);
 }
 
 function populateHotelData() {
   hotel.createObjects(guestData);
   hotel.createObjects(roomData);
   hotel.createObjects(bookingData);
-  console.log('pickled hotel <>>>', hotel);}
+  // console.log('pickled hotel <>>>', hotel);
+
+  createUser();
+}
+
+function createUser() {
+  console.log('hotel <>>>', hotel);
+}
