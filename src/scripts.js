@@ -21,7 +21,7 @@ function createHotel() {
   // console.log('hello?')
   hotel = new Hotel();
   loadAPIData();
-  console.log('hotel <>>>', hotel);
+  // console.log('hotel <>>>', hotel);
 }
 
 function loadAPIData() {
@@ -32,8 +32,8 @@ function loadAPIData() {
     roomData = allData[1];
     bookingData = allData[2];
   })
-  setTimeout(logPickleData, 100);
-  // buildHotelData();
+  // setTimeout(logPickleData, 100);
+  setTimeout(populateHotelData, 100);
 }
 
 function logPickleData() {
@@ -47,7 +47,8 @@ function logPickleData() {
   console.log('pickled hotel <>>>', hotel);
 }
 
-// function buildHotelData() {
-//   console.log('guestData <>>>', guestData)
-//   // hotel.allGuests = hotel.createObjects(guestData);
-// }
+function populateHotelData() {
+  hotel.createObjects(guestData);
+  hotel.createObjects(roomData);
+  hotel.createObjects(bookingData);
+  console.log('pickled hotel <>>>', hotel);}
