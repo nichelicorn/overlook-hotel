@@ -130,7 +130,7 @@ describe('The Hotel', () => {
       hotel.createObjects(guests);
       hotel.login('customer13', 'overlook2021');
 
-      expect(hotel.activeUser.id).to.equal(13);
+      expect(hotel.activeUser[0].id).to.equal(13);
 
     })
 

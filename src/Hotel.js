@@ -70,6 +70,7 @@ class Hotel {
       // console.log('guest id <>>>', guest.id);
       if (guest.id === id && guest.password === password) {
         console.log('hello active user');
+        return guest;
       }
 
     });
