@@ -9,6 +9,7 @@ class Guest {
     this.pendingBookings = []; this.futureBookings = [];
     this.totalSpent = 0;
     this.username = `customer${this.id}`;
+    this.password = 'overlook2021';
   }
 
   requestBooking(date, room) {

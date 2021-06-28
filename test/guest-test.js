@@ -95,9 +95,11 @@ describe('The Guest', () => {
       expect(guest3.username).to.be.a('string');
     })
 
-    // it.skip('should store a password', () => {
-    //
-    // })
+    it('should store a password', () => {
+      expect(guest1.password).to.equal('overlook2021');
+      expect(guest2.password).to.equal('overlook2021');
+      expect(guest3.password).to.equal('overlook2021');
+    })
 
     // it.skip('should store the password as a string', () => {
     //
