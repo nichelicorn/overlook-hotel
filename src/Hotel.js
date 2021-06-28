@@ -56,10 +56,21 @@ class Hotel {
 
   login(username, password) {
 
+    // console.log('username <>>>', username);
+    // console.log('password <>>>', password);
+    // console.log('this.allGuests <>>>', this.allGuests);
+
+    // find the guest whose id matches the number included in the username
+
+    let id = Number(username.slice(-2));
+    console.log('id <>>>', id);
+
+    this.activeUser = this.allGuests.filter(guest => {
+      console.log('guest id <>>>', guest.id);
+
+    });
+
     console.log('this.activeUser <>>>', this.activeUser);
-    console.log('username <>>>', username);
-    console.log('password <>>>', password);
-    console.log('this.allGuests <>>>', this.allGuests);
 
 
   }
