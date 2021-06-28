@@ -126,11 +126,11 @@ describe('The Hotel', () => {
 
       // if a guest is found with a matching username AND the password matches the guest's password
 
-      // reassign Hotel.activeGuest to the logged in guest
+      // reassign Hotel.activeUser to the logged in user
 
       hotel.login('customer13', 'overlook2021');
 
-      expect(hotel.activeGuest.id).to.equal(13);
+      expect(hotel.activeUser.id).to.equal(13);
 
     })
 

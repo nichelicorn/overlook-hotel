@@ -7,6 +7,7 @@ class Hotel {
     this.allGuests = [];
     this.allRooms = [];
     this.allBookings = [];
+    this.activeUser = null;
   }
 
   createObjects(largeObject) {
@@ -54,7 +55,7 @@ class Hotel {
   }
 
   login(username, password) {
-    
+
   }
 }
 
