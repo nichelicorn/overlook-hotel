@@ -125,9 +125,10 @@ describe('The Hotel', () => {
       expect(hotel.activeUser[0].id).to.equal(13);
     })
 
-    // it.skip('should not grant log in access if credentials are invalid', () => {
-    //
-    // })
+    it('should not grant log in access if credentials are invalid', () => {
+      hotel.createObjects(guests);
+      expect(hotel.login('customer3', 'overlook2020')).to.equal('Sorry, your login was incorrect. Please try again.');
+    })
 
   })
 })
