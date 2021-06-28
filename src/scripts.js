@@ -27,16 +27,27 @@ function createHotel() {
 function loadAPIData() {
   apiCalls.getAllData()
   .then(allData => {
-    guestData = allData[0];
+    guestData = allData[0]; // need to build hotel data in these lines
+    // hotel.allGuests = hotel.createObjects(allData[0]);
     roomData = allData[1];
     bookingData = allData[2];
-  }
-)
-setTimeout(logPickleData, 5000);
+  })
+  setTimeout(logPickleData, 100);
+  // buildHotelData();
 }
 
 function logPickleData() {
   console.log('pickle Guests <>>>', guestData);
   console.log('pickle Rooms <>>>', roomData);
   console.log('pickle Bookings <>>>', bookingData);
+  console.log('pickle guestData <>>>', guestData);
+  hotel.createObjects(guestData);
+  hotel.createObjects(roomData);
+  hotel.createObjects(bookingData);
+  console.log('pickled hotel <>>>', hotel);
 }
+
+// function buildHotelData() {
+//   console.log('guestData <>>>', guestData)
+//   // hotel.allGuests = hotel.createObjects(guestData);
+// }
