@@ -62,7 +62,8 @@ class Hotel {
 
     // find the guest whose id matches the number included in the username
 
-    let id = Number(username.slice(-2));
+    let id = Number(username.slice(8)); // this will work if the username starts with the string 'customer'
+    // let id = Number(username.slice(-2)); // this will only work if the id is over two numbers;
     console.log('id <>>>', id);
 
     this.activeUser = this.allGuests.filter(guest => {
