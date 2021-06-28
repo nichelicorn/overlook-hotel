@@ -1,21 +1,21 @@
-// // This is the JavaScript entry file - your code begins here
-// // Do not delete or rename this file ********
-//
-// // An example of how you tell webpack to use a CSS (SCSS) file
-// import './css/base.scss';
-import apiCalls from './api-calls.js'
-//
-// // An example of how you tell webpack to use an image (also need to link to it in the index.html)
-// import './images/turing-logo.png'
+import Hotel from './Hotel.js';
+import apiCalls from './api-calls.js';
+
+// create new hotel
+// Hotel.createObjects for guests, rooms, bookings
+// hotel.activeUser.viewAllBookings
+// hotel.activeUser.calcTotalSpent
 
 
 // 🌐 Global Variables
+let hotel;
 
-let allGuests, allRooms, allBookings;
+// let allGuests, allRooms, allBookings;
 
 
 
-window.addEventListener('load', loadAPIData);
+// window.addEventListener('load', loadAPIData);
+window.addEventListener('load', createHotel);
 
 function loadAPIData() {
   apiCalls.getAllData()
@@ -32,4 +32,10 @@ function logPickleData() {
   console.log('pickle Guests <>>>', allGuests);
   console.log('pickle Rooms <>>>', allRooms);
   console.log('pickle Bookings <>>>', allBookings);
+}
+
+function createHotel() {
+  console.log('hello?')
+  hotel = new Hotel();
+  console.log('hotel <>>>', hotel);
 }
