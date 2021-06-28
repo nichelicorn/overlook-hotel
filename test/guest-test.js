@@ -101,9 +101,11 @@ describe('The Guest', () => {
       expect(guest3.password).to.equal('overlook2021');
     })
 
-    // it.skip('should store the password as a string', () => {
-    //
-    // })
+    it('should store the password as a string', () => {
+      expect(guest1.password).to.be.a('string');
+      expect(guest2.password).to.be.a('string');
+      expect(guest3.password).to.be.a('string');    
+    })
 
     describe('Guest methods', () => {
       // Guest.requestBooking
