@@ -1,5 +1,6 @@
 import Hotel from './Hotel.js';
 import apiCalls from './api-calls.js';
+import domUpdates from './dom-updates.js';
 
 // create new hotel
 // Hotel.createObjects for guests, rooms, bookings
