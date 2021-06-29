@@ -4,7 +4,7 @@ class Guest {
   constructor(userData) {
     this.id = userData.id;
     this.name = userData.name;
-    this.pastBookings = [];
+    // this.pastBookings = [];
     this.allBookings = [];
     this.pendingBookings = []; this.futureBookings = [];
     this.totalSpent = 0;
@@ -22,14 +22,15 @@ class Guest {
     return newBookingObj;
   }
 
-  viewAllBookings() {
-    this.allBookings = testBookings.filter(booking => {
+  // viewAllBookings() { // refactor to accept an array with API data
+  viewAllBookings(array) {
+    this.allBookings = array.filter(booking => {
       return this.id === booking.userID;
     })
   }
 
-  calcTotalSpent() {
-    let updateBooking = testRooms.map(room => {
+  calcTotalSpent(array) {
+    let updateBooking = array.map(room => {
       let objAdjuster = this.allBookings.map(booking => {
       if (booking.userID === this.id && booking.roomNumber === room.number) {
         booking['nightlyRoomCharge'] = room.costPerNight; // fix the rounding errors in the DOM
