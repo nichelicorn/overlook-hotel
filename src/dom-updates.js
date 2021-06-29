@@ -18,6 +18,11 @@ const domUpdates = {
     guestSpending.innerText = `You have spent $${spendings.toFixed(2)} since your first stay at the Overlook.`
   },
 
+  guestBookings(bookings) {
+    allBookingsSec.innerHTML = "";
+    
+  }
+
 }
 
 export default domUpdates;
