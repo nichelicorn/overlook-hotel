@@ -53,12 +53,13 @@ function populateHotelData() {
   hotel.createObjects(bookingData);
   // console.log('pickled hotel <>>>', hotel);
 
-  createUser();
+  loadUserData();
 }
 
-function createUser() {
+function loadUserData() {
   const randomNum = Math.floor(Math.random() * hotel.allGuests.length);
 
   hotel.activeUser = hotel.allGuests[randomNum];
+  hotel.activeUser.viewAllBookings(hotel.allBookings);
   console.log('hotel <>>>', hotel);
 }

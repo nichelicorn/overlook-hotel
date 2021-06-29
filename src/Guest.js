@@ -22,8 +22,9 @@ class Guest {
     return newBookingObj;
   }
 
-  viewAllBookings() {
-    this.allBookings = testBookings.filter(booking => {
+  // viewAllBookings() { // refactor to accept an array with API data
+  viewAllBookings(array) {
+    this.allBookings = array.filter(booking => {
       return this.id === booking.userID;
     })
   }
