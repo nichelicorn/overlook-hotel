@@ -57,5 +57,8 @@ function populateHotelData() {
 }
 
 function createUser() {
+  const randomNum = Math.floor(Math.random() * hotel.allGuests.length);
+
+  hotel.activeUser = hotel.allGuests[randomNum];
   console.log('hotel <>>>', hotel);
 }
