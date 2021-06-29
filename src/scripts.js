@@ -32,6 +32,7 @@ function loadAPIData() {
     // hotel.allGuests = hotel.createObjects(allData[0]);
     roomData = allData[1];
     bookingData = allData[2];
+
   })
   // setTimeout(logPickleData, 100);
   setTimeout(populateHotelData, 100);
