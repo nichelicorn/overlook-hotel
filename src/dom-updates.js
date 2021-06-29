@@ -18,7 +18,7 @@ const domUpdates = {
   guestAmtSpent(spendings) {
     // console.log('spendings DOM <>>>', spendings);
     // guestSpending.innerText = `Hi!`;
-    guestSpending.innerText = `You have spent $${spendings} since your first stay at the Overlook.`
+    guestSpending.innerText = `You have spent $${spendings.toFixed(2)} since your first stay at the Overlook.`
     // display hotel.activeUser.totalSpent
   },
 
