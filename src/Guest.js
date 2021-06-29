@@ -4,7 +4,7 @@ class Guest {
   constructor(userData) {
     this.id = userData.id;
     this.name = userData.name;
-    this.pastBookings = [];
+    // this.pastBookings = [];
     this.allBookings = [];
     this.pendingBookings = []; this.futureBookings = [];
     this.totalSpent = 0;
