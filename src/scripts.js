@@ -68,6 +68,9 @@ function loadUserData() {
 
   const spendings = hotel.activeUser.totalSpent;
   const name = hotel.activeUser.name;
+  const bookings = hotel.activeUser.allBookings;
+
   domUpdates.guestWelcomeMsg(name);
   domUpdates.guestAmtSpent(spendings);
+  domUpdates.guestBookings(bookings);
 }
