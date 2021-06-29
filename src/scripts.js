@@ -68,9 +68,6 @@ function loadUserData() {
 
   const spendings = hotel.activeUser.totalSpent;
   const name = hotel.activeUser.name;
-  // console.log('spendings scripts <>>>', spendings);
-  console.log('dom updates? <>>>', domUpdates); // logs an empty object; not picking up the functions inside...
   domUpdates.guestWelcomeMsg(name);
   domUpdates.guestAmtSpent(spendings);
-  // domUpdates.guestAmtSpent(hotel.activeUser.totalSpent);
 }
