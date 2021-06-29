@@ -10,10 +10,9 @@ const welcomeMsg = document.getElementById('welcomeMsg');
 const domUpdates = {
 
   guestWelcomeMsg(name) {
-    let firstName = name;
-    console.log(firstName);
+    let firstName = name.split(' ')[0];
+    // console.log(firstName);
     welcomeMsg.innerText = `Welcome to the Overlook, ${firstName}.`;
-
   },
 
   guestAmtSpent(spendings) {
