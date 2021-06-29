@@ -61,5 +61,6 @@ function loadUserData() {
 
   hotel.activeUser = hotel.allGuests[randomNum];
   hotel.activeUser.viewAllBookings(hotel.allBookings);
+  hotel.activeUser.calcTotalSpent(hotel.allRooms);
   console.log('hotel <>>>', hotel);
 }

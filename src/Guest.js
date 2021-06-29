@@ -29,8 +29,8 @@ class Guest {
     })
   }
 
-  calcTotalSpent() {
-    let updateBooking = testRooms.map(room => {
+  calcTotalSpent(array) {
+    let updateBooking = array.map(room => {
       let objAdjuster = this.allBookings.map(booking => {
       if (booking.userID === this.id && booking.roomNumber === room.number) {
         booking['nightlyRoomCharge'] = room.costPerNight; // fix the rounding errors in the DOM
