@@ -20,7 +20,18 @@ const domUpdates = {
 
   guestBookings(bookings) {
     allBookingsSec.innerHTML = "";
-    
+
+    bookings.forEach(booking => {
+      console.log('booking <>>>', booking);
+      allBookingsSec.insertAdjacentHTML("beforeend",
+        `<article class="booking">
+          <p>${booking.roomNumber}</p>
+          <img src="https://images.pexels.com/photos/1103808/pexels-photo-1103808.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="A posh hotel room">
+          <p>$666.66</p>
+        </article>`
+      )
+    })
+
   }
 
 }
