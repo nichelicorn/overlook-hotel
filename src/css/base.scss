@@ -9,16 +9,16 @@
 
 /* 📇 Import Directory */
 @import "partials/variables";
+@import "partials/typography";
+@import "partials/queries";
+@import "partials/mixins";
 @import "partials/reset";
 @import "partials/body";
 @import "partials/login";
+@import "partials/navigation";
+@import "partials/dashboard";
 @import "partials/cards";
 @import "partials/content";
-@import "partials/dashboard";
-@import "partials/mixins";
-@import "partials/navigation";
-@import "partials/queries";
-@import "partials/typography";
 
 /*  */
 
