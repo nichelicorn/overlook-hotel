@@ -26,7 +26,7 @@ const domUpdates = {
       allBookingsSec.insertAdjacentHTML("beforeend",
         `<article class="booking-card">
           <p>Room no. ${booking.roomNumber}</p>
-          <img src="https://images.pexels.com/photos/1103808/pexels-photo-1103808.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="A posh hotel room">
+          <img src="" alt="A posh hotel room">
           <p>Spent $${booking.nightlyRoomCharge} this visit</p>
         </article>`
       )
