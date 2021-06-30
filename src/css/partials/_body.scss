@@ -1,7 +1,8 @@
 /*  */
 
 body {
-  font: $base-font-size, $base-font-family;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
   background-color: $white;
   color: $dark-cyan;
 }
