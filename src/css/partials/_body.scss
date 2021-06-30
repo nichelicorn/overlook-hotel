@@ -7,10 +7,15 @@ body {
   color: $dark-cyan;
 }
 
-/*  */
+/* Body Grid */
+body {
+  display: grid;
 
+}
 
-/*  */
-
+/* Hidden Property */
+.hidden {
+  display: none;
+}
 
 /*  */
