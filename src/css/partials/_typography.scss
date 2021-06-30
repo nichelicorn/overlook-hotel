@@ -1,0 +1,18 @@
+/* 🔠 Typography Styles */
+
+/* Font Weights */
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+/* Base Font */
+$base-font-family: 'Verdana', sans-serif;
+$base-font-size: 16px; // include this in the html element styling to set the base font size; this will set the baseline as 16px; use rem units for all other style sizing, ex 1rem = 16px, 1.5rem = 24px, etc.
+$base-font-weight: $regular;
+$base-line-height: 1.2;
+
+
+/*  */
+
+
+/*  */
