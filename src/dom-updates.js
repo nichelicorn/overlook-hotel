@@ -4,6 +4,7 @@
 const allBookingsSec = document.getElementById('allBookingsSec');
 const guestSpending = document.getElementById('guestSpending');
 const welcomeMsg = document.getElementById('welcomeMsg');
+const latestStay = document.getElementById('latestStay');
 
 // DOM Update Functions
 const domUpdates = {
