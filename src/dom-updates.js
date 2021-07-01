@@ -11,7 +11,7 @@ const domUpdates = {
 
   guestWelcomeMsg(name) {
     const firstName = name.split(' ')[0];
-    welcomeMsg.innerText = `Welcome to the Overlook, ${firstName}.`;
+    welcomeMsg.innerText = `Welcome back, ${firstName}!`;
   },
 
   guestAmtSpent(spendings) {
