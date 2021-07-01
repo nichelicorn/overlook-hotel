@@ -22,7 +22,7 @@ const domUpdates = {
     latestStay.innerHTML = "";
     const booking = bookings[0];
 
-    console.log("bookings[0] <>>>", bookings[0]);
+    // console.log("bookings[0] <>>>", bookings[0]);
 
     latestStay.insertAdjacentHTML("beforeend", `
       <article class="latest-booking-card" id="${booking.id}">
