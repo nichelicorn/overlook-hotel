@@ -18,13 +18,16 @@ const domUpdates = {
     guestSpending.innerText = `You have spent $${spendings.toFixed(2)} since your first stay at the Overlook.`
   },
 
-  allGuestBookings(bookings) {
+  latestGuestBooking() {
     latestStay.innerHTML = "";
+
+  },
+
+  allGuestBookings(bookings) {
     allBookingsSec.innerHTML = "";
 
     bookings.forEach(booking => {
-      console.log('booking <>>>', booking);
-      // console.log('index <>>>', index);
+      // console.log('booking <>>>', booking);
 
       allBookingsSec.insertAdjacentHTML("beforeend",
         `<article class="booking-card" id="${booking.id}">

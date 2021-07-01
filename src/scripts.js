@@ -82,5 +82,6 @@ function loadUserData() {
 
   domUpdates.guestWelcomeMsg(name);
   domUpdates.guestAmtSpent(spendings);
+  domUpdates.latestGuestBooking(sortedBookings);
   domUpdates.allGuestBookings(sortedBookings);
 }
