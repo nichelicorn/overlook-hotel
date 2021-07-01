@@ -3,8 +3,8 @@
 // Query Selectors
 const allBookingsSec = document.getElementById('allBookingsSec');
 const guestSpending = document.getElementById('guestSpending');
-const welcomeMsg = document.getElementById('welcomeMsg');
 const latestStay = document.getElementById('latestStay');
+const welcomeMsg = document.getElementById('welcomeMsg');
 
 // DOM Update Functions
 const domUpdates = {
@@ -18,11 +18,14 @@ const domUpdates = {
     guestSpending.innerText = `You have spent $${spendings.toFixed(2)} since your first stay at the Overlook.`
   },
 
-  guestBookings(bookings) {
+  allGuestBookings(bookings) {
+    latestStay.innerHTML = "";
     allBookingsSec.innerHTML = "";
 
     bookings.forEach(booking => {
-      // console.log('booking <>>>', booking);
+      console.log('booking <>>>', booking);
+      // console.log('index <>>>', index);
+
       allBookingsSec.insertAdjacentHTML("beforeend",
         `<article class="booking-card" id="${booking.id}">
           <p class="room-no">Room no. : ${booking.roomNumber}</p>
