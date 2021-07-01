@@ -1,8 +1,10 @@
 /* HTML and Body styles */
 html,
 body {
+  width: 100%;
   font-size: $base-font-size;
   font-family: $base-font-family;
+  overflow-wrap: break-word;
   background-color: $white;
   color: $dark-cyan;
 }
@@ -17,6 +19,7 @@ body {
     "select-room"
     "content";
   grid-template-rows: auto;
+  width: 100%;
 }
 
 /* Hidden Property */
