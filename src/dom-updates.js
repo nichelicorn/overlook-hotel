@@ -18,8 +18,20 @@ const domUpdates = {
     guestSpending.innerText = `You have spent $${spendings.toFixed(2)} since your first stay at the Overlook.`
   },
 
-  latestGuestBooking() {
+  latestGuestBooking(bookings) {
     latestStay.innerHTML = "";
+    const booking = bookings[0];
+
+    console.log("bookings[0] <>>>", bookings[0]);
+
+    latestStay.insertAdjacentHTML("beforeend", `
+      <article class="booking-card" id="${booking.id}">
+        <p class="room-no">Room no. : ${booking.roomNumber}</p>
+        <p class="room-no">Date : ${booking.date}</p>
+        <img src="" alt="A posh hotel room">
+        <p>Spent $${booking.nightlyRoomCharge} this visit</p>
+      </article>
+    `)
 
   },
 
