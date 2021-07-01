@@ -1,0 +1,32 @@
+/* HTML and Body styles */
+html,
+body {
+  width: 100%;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  text-align: center;
+  overflow-wrap: break-word;
+  background-color: $white;
+  color: $dark-cyan;
+}
+
+/* Body Grid */
+.body-container {
+  display: flex;
+  flex-direction: column;
+  // display: grid;
+  // grid-template-areas:
+  //   "head-nav"
+  //   "full-nav"
+  //   "guest-info"
+  //   "select-room"
+  //   "content";
+  // grid-template-rows: auto;
+}
+
+/* Hidden Property */
+.hidden {
+  display: none;
+}
+
+/*  */

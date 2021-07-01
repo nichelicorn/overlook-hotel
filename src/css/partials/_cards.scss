@@ -1,0 +1,14 @@
+.booking-card {
+  margin: .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $white;
+}
+
+.room-no {
+  font-family: $cursive-font-family;
+  margin: 0;
+  padding: .2rem;
+}

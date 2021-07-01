@@ -2,77 +2,79 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Overlook Hotel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet"> 
   </head>
   <body>
 
-    <nav class="head-nav">
+    <div class="body-container">
 
-      <button type="button" name="button">🍔</button>
+      <nav class="head-nav">
 
-      <h1>The Overlook Hotel</h1>
+        <button type="button" name="button" class="btn">🍔</button>
 
-    </nav>
+        <h1>The Overlook Hotel</h1>
 
-    <nav class="full-nav-menu">
+      </nav>
 
-      <ul>
+      <nav class="full-nav-menu hidden">
 
-        <li><a href="#">Rooms</a></li>
-        <li><a href="#">Dining</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">History</a></li>
-        <li><a href="#">About Us</a></li>
+        <ul>
 
-      </ul>
+          <li><a href="#">Rooms</a></li>
+          <li><a href="#">Dining</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">History</a></li>
+          <li><a href="#">About Us</a></li>
 
-    </nav>
+        </ul>
 
-    <section class="welcome-section">
+      </nav>
 
-      <h2 class="welcome-msg" id="welcomeMsg">Welcome, Nichele!</h2>
+      <section class="guest-info-section">
 
-      <h3 class="guest-spending" id="guestSpending">You have spent $666.66 at the Overlook Hotel</h3>
+        <h2 class="welcome-msg" id="welcomeMsg">Welcome back, Nichele!</h2>
 
-      <section class="all-bookings-sec" id="allBookingsSec">
-        <div class="booking">
-          <p>October 31, 2020</p>
-          <img src="https://images.pexels.com/photos/1103808/pexels-photo-1103808.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="A posh hotel room">
-          <p>$666.66</p>
-        </div>
+        <h3 class="guest-spending" id="guestSpending">You have spent $666.66 since your first stay at the Overlook Hotel</h3>
+
+        <section class="all-bookings-sec" id="allBookingsSec">
+
+        </section>
+
+        <section class="new-booking">
+          <p>Stay with us again</p>
+          <img src="https://images.pexels.com/photos/7903172/pexels-photo-7903172.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="A view out a window, looking at a lake and mountains">
+          <button type="button" name="button" class="btn">Book a room</button>
+        </section>
+
       </section>
 
-      <section class="new-booking">
-        <p>Stay with us again</p>
-        <img src="https://images.pexels.com/photos/7903172/pexels-photo-7903172.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="A view out a window, looking at a lake and mountains">
-        <button type="button" name="button">Book a room</button>
+      <nav class="select-room">
+
+        <button type="button" name="button" class="btn">Select Check-In Date</button>
+
+        <button type="button" name="button" class="btn">Select Room Type</button>
+
+        <button type="button" name="button" class="btn">Check Selection Availability</button>
+
+      </nav>
+
+      <section class="content">
+
+        <article class="hotel-happenings">
+          <p>Things Happening at the Overlook</p>
+        </article>
+
+        <section>
+          image
+        </section>
+
       </section>
 
-      <!-- <img src="https://images.pexels.com/photos/4825701/pexels-photo-4825701.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="A view of the ocean, from inside a luxurious seaside tent"> -->
-
-    </section>
-
-    <nav class="select-room">
-
-      <button type="button" name="button">Select Check-In Date</button>
-
-      <button type="button" name="button">Select Room Type</button>
-
-      <button type="button" name="button">Check Selection Availability</button>
-
-    </nav>
-
-    <section class="content">
-
-      <article class="hotel-happenings">
-
-      </article>
-
-      <section>
-        image
-      </section>
-
-    </section>
+    </div>
 
   </body>
 </html>
