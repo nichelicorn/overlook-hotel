@@ -25,7 +25,7 @@ const domUpdates = {
     console.log("bookings[0] <>>>", bookings[0]);
 
     latestStay.insertAdjacentHTML("beforeend", `
-      <article class="booking-card" id="${booking.id}">
+      <article class="latest-booking-card" id="${booking.id}">
         <p class="room-no">Room no. : ${booking.roomNumber}</p>
         <p class="room-no">Date : ${booking.date}</p>
         <img src="" alt="A posh hotel room">

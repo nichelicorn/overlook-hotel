@@ -1,10 +1,16 @@
-.booking-card {
+.booking-card,
+.latest-booking-card {
   margin: .5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   background-color: $white;
+}
+
+.latest-booking-card {
+  background-color: $dark-cyan;
+  color: $white;
 }
 
 .room-no {
