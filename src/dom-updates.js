@@ -21,7 +21,7 @@ const domUpdates = {
     allBookingsSec.innerHTML = "";
 
     bookings.forEach(booking => {
-      console.log('booking <>>>', booking);
+      // console.log('booking <>>>', booking);
       allBookingsSec.insertAdjacentHTML("beforeend",
         `<article class="booking-card" id="${booking.id}">
           <p class="room-no">Room no. : ${booking.roomNumber}</p>
