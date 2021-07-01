@@ -68,9 +68,19 @@ function loadUserData() {
 
   const spendings = hotel.activeUser.totalSpent;
   const name = hotel.activeUser.name;
-  const bookings = hotel.activeUser.allBookings;
+  // const bookings = hotel.activeUser.allBookings;
+
+  // console.log(' bookings <>>>', bookings);
+
+  const sortedBookings = hotel.activeUser.allBookings.sort((a, b) => {
+    // console.log('a.date <>>>', a.date);
+    // console.log('b.date <>>>', b.date);
+    return new Date(a.date) - new Date(b.date);
+  });
+
+  // console.log('sorted bookings <>>>', sortedBookings);
 
   domUpdates.guestWelcomeMsg(name);
   domUpdates.guestAmtSpent(spendings);
-  domUpdates.guestBookings(bookings);
+  domUpdates.guestBookings(sortedBookings);
 }
