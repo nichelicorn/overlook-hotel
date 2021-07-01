@@ -64,13 +64,24 @@ function loadUserData() {
   hotel.activeUser = hotel.allGuests[randomNum];
   hotel.activeUser.viewAllBookings(hotel.allBookings);
   hotel.activeUser.calcTotalSpent(hotel.allRooms);
-  console.log('hotel <>>>', hotel);
+  // console.log('hotel <>>>', hotel);
 
   const spendings = hotel.activeUser.totalSpent;
   const name = hotel.activeUser.name;
-  const bookings = hotel.activeUser.allBookings;
+  // const bookings = hotel.activeUser.allBookings;
+
+  // console.log(' bookings <>>>', bookings);
+
+  const sortedBookings = hotel.activeUser.allBookings.sort((a, b) => {
+    // console.log('a.date <>>>', a.date);
+    // console.log('b.date <>>>', b.date);
+    return new Date(a.date) - new Date(b.date);
+  });
+
+  // console.log('sorted bookings <>>>', sortedBookings);
 
   domUpdates.guestWelcomeMsg(name);
   domUpdates.guestAmtSpent(spendings);
-  domUpdates.guestBookings(bookings);
+  domUpdates.latestGuestBooking(sortedBookings);
+  domUpdates.allGuestBookings(sortedBookings);
 }

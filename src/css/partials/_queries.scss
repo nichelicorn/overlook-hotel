@@ -1,0 +1,25 @@
+/* 📱 Tablet Styles */
+@media screen and (min-width: $tablet) and (max-width: $laptop - 1) {
+  .all-bookings-sec {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 💻 Laptop Styles */
+@media screen and (min-width: $laptop) and (max-width: $desktop - 1) {
+  .all-bookings-sec {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 🖥 Desktop Styles */
+@media screen and (min-width: $desktop) and (max-width: $jumbo - 1) {
+  .all-bookings-sec {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*  */
