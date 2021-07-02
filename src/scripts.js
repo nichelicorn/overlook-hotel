@@ -91,9 +91,9 @@ function loadUserData() {
 function loadAvailRooms() {
   // what are we doing here?
   // gather data from the booking form
-  // guestBookingForm
+  // roomSearchForm
   // hotel.activeUser.requestBooking(date, room);
-  // pass date and room data through using the data from the guestBookingForm
+  // pass date and room data through using the data from the roomSearchForm
   // hotel.filterRoomsByType(room);
   // hotel.viewAvailRooms(date, roomType)
   // domUpdates.availRooms();
