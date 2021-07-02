@@ -6,6 +6,8 @@ const guestSpending = document.getElementById('guestSpending');
 const latestStay = document.getElementById('latestStay');
 const welcomeMsg = document.getElementById('welcomeMsg');
 
+const viewAvailRoomsBtn = document.getElementById('viewAvailRoomsBtn');
+
 // DOM Update Functions
 const domUpdates = {
 

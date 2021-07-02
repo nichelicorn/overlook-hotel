@@ -61,12 +61,12 @@
 
       </section>
 
-      <section class="guest-booking-form" id="guestBookingForm">
-        <form class="booking-form" action="index.html" method="post">
+      <section class="room-search-container" id="roomSearchContainer">
+        <form class="room-search-form" action="index.html" method="post" id="roomSearchForm">
           <!-- this form should contain: -->
           <!-- date selection -->
           <label for="booking-date">Desired Date : </label>
-          <input type="date" name="booking-date" id="bookingDateInput" value="">
+          <input type="date" name="requested-date" id="requestedDate" value="">
           <!-- room selection -->
           <!-- <label for="room-selected">Desired Room : </label> -->
           <p>Desired Room : </p>
@@ -82,9 +82,9 @@
           </div>
           <!-- number of guests -->
           <label for="no-guests">Number of Guests : </label>
-          <input type="number" name="no-guests" value="1" min="1">
+          <input type="number" name="no-guests" value="1" min="1" max="7">
           <!-- submit button -->
-          <button type="button" name="button" class="btn">Submit Request</button>
+          <button type="button" name="button" class="btn" id="viewAvailRoomsBtn">View Available Rooms</button>
         </form>
       </section>
 
