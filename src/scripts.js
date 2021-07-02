@@ -17,7 +17,7 @@ let guestData, roomData, bookingData;
 
 // 🪤 Event Listeners
 window.addEventListener('load', createHotel);
-viewAvailRoomsBtn.addEventListener('click', sendBookingRequest);
+viewAvailRoomsBtn.addEventListener('click', loadAvailRooms);
 
 // 🎬 Scripting Functions
 function createHotel() {
@@ -88,10 +88,15 @@ function loadUserData() {
   domUpdates.allGuestBookings(sortedBookings);
 }
 
-function sendBookingRequest() {
+function loadAvailRooms() {
   // what are we doing here?
   // gather data from the booking form
   // guestBookingForm
   // hotel.activeUser.requestBooking(date, room);
   // pass date and room data through using the data from the guestBookingForm
+  // hotel.filterRoomsByType(room);
+  // hotel.viewAvailRooms(date, roomType)
+  // domUpdates.availRooms();
+    // display room cards w/ basic info
+    // clicking on card displays popout with full room data
 }
