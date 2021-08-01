@@ -10,8 +10,8 @@ import domUpdates from './dom-updates.js';
 
 // 🌐 Global Variables
 let hotel;
-
 let guestData, roomData, bookingData;
+let availRooms = [];
 
 
 
