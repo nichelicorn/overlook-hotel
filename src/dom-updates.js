@@ -5,7 +5,6 @@ const allBookingsSec = document.getElementById('allBookingsSec');
 const guestSpending = document.getElementById('guestSpending');
 const latestStay = document.getElementById('latestStay');
 const welcomeMsg = document.getElementById('welcomeMsg');
-
 const viewAvailRoomsBtn = document.getElementById('viewAvailRoomsBtn');
 const roomSearchForm = document.getElementById('roomSearchForm');
 
@@ -24,7 +23,6 @@ const domUpdates = {
   latestGuestBooking(bookings) {
     latestStay.innerHTML = "";
     const booking = bookings[0];
-
     // console.log("bookings[0] <>>>", bookings[0]);
 
     latestStay.insertAdjacentHTML("beforeend", `
@@ -35,7 +33,6 @@ const domUpdates = {
         <p>Spent $${booking.nightlyRoomCharge} this visit</p>
       </article>
     `)
-
   },
 
   allGuestBookings(bookings) {
@@ -43,7 +40,6 @@ const domUpdates = {
 
     bookings.forEach(booking => {
       // console.log('booking <>>>', booking);
-
       allBookingsSec.insertAdjacentHTML("beforeend",
         `<article class="booking-card" id="${booking.id}">
           <p class="room-no">Room no. : ${booking.roomNumber}</p>
@@ -53,6 +49,9 @@ const domUpdates = {
         </article>`
       )
     })
+  },
+
+  availableRooms() {
 
   }
 
