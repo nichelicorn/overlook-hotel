@@ -52,6 +52,12 @@ const domUpdates = {
   },
 
   availableRooms() {
+    // what should happen here?
+    // guest selects desired date from the calendar
+    // guest selects desired room type from the radio options
+    // run function to return available rooms of that type
+    // run function to return rooms of that type available on the selected date
+
 
   }
 
