@@ -10,6 +10,7 @@ let availRooms = [];
 
 // 🔎 Query Selectors
 const viewAvailRoomsBtn = document.getElementById('viewAvailRoomsBtn');
+const requestedDate = document.getElementById('requestedDate');
 
 
 // 🪤 Event Listeners
@@ -89,8 +90,8 @@ function loadAvailRooms() {
   // what are we doing here?
   // gather data from the booking form
   // roomSearchForm
-  let date = document.getElementById('requestedDate');
-  console.log('requested date <>>>', date);
+  let date = requestedDate.value;
+  console.log('selected date <>>>', date);
   // pass date and room data through using the data from the roomSearchForm
   // hotel.viewAvailRooms(date, roomType)
   // domUpdates.availableRooms();
