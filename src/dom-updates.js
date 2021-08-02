@@ -5,7 +5,7 @@ const allBookingsSec = document.getElementById('allBookingsSec');
 const guestSpending = document.getElementById('guestSpending');
 const latestStay = document.getElementById('latestStay');
 const welcomeMsg = document.getElementById('welcomeMsg');
-const viewAvailRoomsBtn = document.getElementById('viewAvailRoomsBtn');
+// const viewAvailRoomsBtn = document.getElementById('viewAvailRoomsBtn');
 const roomSearchForm = document.getElementById('roomSearchForm');
 
 // DOM Update Functions

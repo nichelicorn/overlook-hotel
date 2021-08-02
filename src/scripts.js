@@ -1,18 +1,15 @@
+// 🗃 File Imports
 import Hotel from './Hotel.js';
 import apiCalls from './api-calls.js';
 import domUpdates from './dom-updates.js';
-
-// create new hotel
-// Hotel.createObjects for guests, rooms, bookings
-// hotel.activeUser.viewAllBookings
-// hotel.activeUser.calcTotalSpent
-
 
 // 🌐 Global Variables
 let hotel;
 let guestData, roomData, bookingData;
 let availRooms = [];
 
+// 🔎 Query Selectors
+const viewAvailRoomsBtn = document.getElementById('viewAvailRoomsBtn');
 
 
 // 🪤 Event Listeners
@@ -92,6 +89,8 @@ function loadAvailRooms() {
   // what are we doing here?
   // gather data from the booking form
   // roomSearchForm
+  let date = document.getElementById('requestedDate');
+  console.log('requested date <>>>', date);
   // pass date and room data through using the data from the roomSearchForm
   // hotel.viewAvailRooms(date, roomType)
   // domUpdates.availableRooms();
