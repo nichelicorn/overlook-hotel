@@ -87,16 +87,10 @@ function loadUserData() {
 }
 
 function loadAvailRooms() {
-  // what are we doing here?
-  // gather data from the booking form
-  // roomSearchForm
   let date = requestedDate.value;
-  console.log('selected date <>>>', date); // logs the date selected in the HTML input
+  // console.log('selected date <>>>', date); // logs the date selected in the HTML input
   let room = loadRoomSelection();
-  console.log('room <>>>', room);
-  // pass date and room data through using the data from the roomSearchForm
-  // hotel.viewAvailRooms(date, roomType)
-  // console.log(hotel.viewAvailRooms(date, room));
+  // console.log('room <>>>', room);
   availRooms = hotel.viewAvailRooms(date, room);
   console.log('avail rooms <>>>', availRooms);
   // domUpdates.availableRooms();
