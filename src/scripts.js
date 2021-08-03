@@ -101,6 +101,20 @@ function loadAvailRooms() {
     // clicking on card displays popout with full room data
 }
 
+// if (affirRadio.checked) {
+//   userMessage.innerText = mantras[getRandomIndex(mantras)];
+// } else if (mantraRadio.checked) {
+//   userMessage.innerText = affirmations[getRandomIndex(affirmations)];
+// }
+
 function loadRoomSelection() {
-  
+  if (singleRadio.checked) {
+    return 'single';
+  } else if (jrSuiteRadio.checked) {
+    return 'junior suite';
+  } else if (suiteRadio.checked) {
+    return 'suite'
+  } else {
+    return 'residential suite';
+  }
 }
