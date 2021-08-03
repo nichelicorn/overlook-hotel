@@ -96,6 +96,9 @@ function loadAvailRooms() {
   console.log('room <>>>', room);
   // pass date and room data through using the data from the roomSearchForm
   // hotel.viewAvailRooms(date, roomType)
+  // console.log(hotel.viewAvailRooms(date, room));
+  availRooms = hotel.viewAvailRooms(date, room);
+  console.log('avail rooms <>>>', availRooms);
   // domUpdates.availableRooms();
     // display room cards w/ basic info
     // clicking on card displays popout with full room data
