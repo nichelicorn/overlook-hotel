@@ -39,7 +39,7 @@ const domUpdates = {
   allGuestBookings(bookings) {
     allBookingsSec.innerHTML = "";
 
-    bookings.forEach(booking => {
+    bookings.map(booking => {
       // console.log('booking <>>>', booking);
       allBookingsSec.insertAdjacentHTML("beforeend",
         `<article class="booking-card" id="${booking.id}">
@@ -58,8 +58,10 @@ const domUpdates = {
 
     availRoomsContainer.innerHTML = "";
 
-    console.log('rooms <>>>', rooms);
+    console.log('DOM update rooms array <>>>', rooms);
+    rooms.map(room => {
 
+    })
   }
 
 }
