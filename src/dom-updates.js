@@ -2,6 +2,7 @@
 
 // Query Selectors
 const allBookingsSec = document.getElementById('allBookingsSec');
+const availRoomsContainer = document.getElementById('availRoomsContainer');
 const guestSpending = document.getElementById('guestSpending');
 const latestStay = document.getElementById('latestStay');
 const welcomeMsg = document.getElementById('welcomeMsg');
@@ -53,7 +54,9 @@ const domUpdates = {
 
   availableRooms(rooms) {
     // what should happen here?
+    // inside availRoomsContainer, display all rooms that meet search criteria (displayed in console)
 
+    availRoomsContainer.innerHTML = "";
 
   }
 
