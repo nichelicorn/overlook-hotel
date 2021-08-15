@@ -58,6 +58,8 @@ const domUpdates = {
 
     availRoomsContainer.innerHTML = "";
 
+    console.log('rooms <>>>', rooms);
+
   }
 
 }

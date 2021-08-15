@@ -94,7 +94,8 @@ function loadAvailRooms() {
   availRooms = hotel.viewAvailRooms(date, room); console.log('avail rooms <>>>', availRooms);
   // domUpdates.availableRooms(); // display room cards w/ basic info
 
-    // clicking on card displays popout with full room data
+  // clicking on card displays popout with full room data
+  domUpdates.availableRooms(availRooms);
 }
 
 // if (affirRadio.checked) {
