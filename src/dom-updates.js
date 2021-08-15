@@ -2,7 +2,7 @@
 
 // Query Selectors
 const allBookingsSec = document.getElementById('allBookingsSec');
-const availRoomsContainer = document.getElementById('availRoomsContainer');
+const availRoomsSection = document.getElementById('availRoomsSection');
 const guestSpending = document.getElementById('guestSpending');
 const latestStay = document.getElementById('latestStay');
 const welcomeMsg = document.getElementById('welcomeMsg');
@@ -54,12 +54,17 @@ const domUpdates = {
 
   availableRooms(rooms) {
     // what should happen here?
-    // inside availRoomsContainer, display all rooms that meet search criteria (displayed in console)
+    // inside availRoomsSection, display all rooms that meet search criteria (displayed in console)
 
-    availRoomsContainer.innerHTML = "";
+    availRoomsSection.innerHTML = "";
 
     console.log('DOM update rooms array <>>>', rooms);
     rooms.map(room => {
+      console.log('a room to display <>>>', room);
+      availRoomsSection.insertAdjacentHTML("beforeend",
+        <article class="avail-room-card" id={room.number}
+        </article>
+      )
 
     })
   }
