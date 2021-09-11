@@ -58,17 +58,17 @@ const domUpdates = {
 
     availRoomsSection.innerHTML = "";
 
-    console.log('DOM update rooms array <>>>', rooms);
+    // console.log('DOM update rooms array <>>>', rooms);
     rooms.map(room => {
-      console.log('a room to display <>>>', room);
+      // console.log('a room to display <>>>', room);
       availRoomsSection.insertAdjacentHTML("beforeend",
         `<article class="booking-card" id={room.number}>
             <h2 class="room-no">Room no. : ${room.number}</h2>
             <p class="room-no">Room type : ${room.roomType}</p>
             <p>Bed Size : ${room.bedSize}</p>
-            <p>Number of Beds : ${room.numBeds}</p>
+            <p>No. Beds : ${room.numBeds}</p>
             <p>Bidet? : ${true ? "yes" : "no"}</p>
-            <p>Rate : ${room.costPerNight}</p>
+            <p>Rate : $${room.costPerNight}</p>
         </article>`
       )
 
