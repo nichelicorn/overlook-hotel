@@ -1,10 +1,10 @@
-// console.log('hello DOM udpates!');
-
 // Query Selectors
 const allBookingsSec = document.getElementById('allBookingsSec');
+const availRoomsSection = document.getElementById('availRoomsSection');
 const guestSpending = document.getElementById('guestSpending');
 const latestStay = document.getElementById('latestStay');
 const welcomeMsg = document.getElementById('welcomeMsg');
+const roomSearchForm = document.getElementById('roomSearchForm');
 
 // DOM Update Functions
 const domUpdates = {
@@ -22,8 +22,6 @@ const domUpdates = {
     latestStay.innerHTML = "";
     const booking = bookings[0];
 
-    // console.log("bookings[0] <>>>", bookings[0]);
-
     latestStay.insertAdjacentHTML("beforeend", `
       <article class="latest-booking-card" id="${booking.id}">
         <p class="room-no">Room no. : ${booking.roomNumber}</p>
@@ -32,15 +30,12 @@ const domUpdates = {
         <p>Spent $${booking.nightlyRoomCharge} this visit</p>
       </article>
     `)
-
   },
 
   allGuestBookings(bookings) {
     allBookingsSec.innerHTML = "";
 
-    bookings.forEach(booking => {
-      // console.log('booking <>>>', booking);
-
+    bookings.map(booking => {
       allBookingsSec.insertAdjacentHTML("beforeend",
         `<article class="booking-card" id="${booking.id}">
           <p class="room-no">Room no. : ${booking.roomNumber}</p>
@@ -50,7 +45,24 @@ const domUpdates = {
         </article>`
       )
     })
+  },
 
+  availableRooms(rooms) {
+    availRoomsSection.innerHTML = "";
+
+    rooms.map(room => {
+      availRoomsSection.insertAdjacentHTML("beforeend",
+        // `<button class="booking-card" id=bookCard${room.number}>
+        `<button class="booking-card" id="bookCard">
+            <h2 class="room-no">Room no. : ${room.number}</h2>
+            <p class="room-no">Room type : ${room.roomType}</p>
+            <p>Bed Size : ${room.bedSize}</p>
+            <p>No. Beds : ${room.numBeds}</p>
+            <p>Bidet? ${true ? "yes" : "no"}</p>
+            <p>Rate : $${room.costPerNight}</p>
+        </button>`
+      )
+    });
   }
 
 }

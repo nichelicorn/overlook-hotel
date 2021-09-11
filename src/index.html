@@ -14,16 +14,18 @@
 
       <nav class="head-nav">
 
-        <button type="button" name="button" class="btn">🍔</button>
+        <button type="button" name="button" class="btn">Menu</button>
+        <!-- clicking this button will display the fullNavMenu -->
 
         <h1>The Overlook Hotel</h1>
 
       </nav>
 
-      <nav class="full-nav-menu hidden">
+      <nav class="full-nav-menu" class="fullNavMenu">
 
         <ul>
 
+          <li><a href="#">Book a Room</a></li>
           <li><a href="#">Rooms</a></li>
           <li><a href="#">Dining</a></li>
           <li><a href="#">Events</a></li>
@@ -50,15 +52,48 @@
 
         </section>
 
-        <section class="new-booking">
+        <!-- <section class="booking-nav">
           <p>Stay with us again</p>
           <img src="https://images.pexels.com/photos/7903172/pexels-photo-7903172.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="A view out a window, looking at a lake and mountains">
           <button type="button" name="button" class="btn">Book a room</button>
-        </section>
+          <!-- clicking this button will display the guestBookingForm -->
+        </section> -->
+
 
       </section>
 
-      <nav class="select-room">
+      <section class="room-search-container" id="roomSearchContainer">
+        <form class="room-search-form" action="index.html" method="post" id="roomSearchForm">
+          <!-- this form should contain: -->
+          <!-- date selection -->
+          <label for="booking-date">Desired Date : </label>
+          <input type="date" name="requested-date" id="requestedDate">
+          <!-- room selection -->
+          <!-- <label for="room-selected">Desired Room : </label> -->
+          <p>Desired Room : </p>
+          <div class="radio-container">
+            <input type="radio" name="room" id="singleRadio" value="singleRadio">
+            <label for="single">Single Bed</label>
+            <input type="radio" name="room" id="suiteRadio" value="suite">
+            <label for="suite">Suite</label>
+            <input type="radio" name="room" id="jrSuiteRadio" value="jrSuiteRadio">
+            <label for="suite">Junior Suite</label>
+            <input type="radio" name="room" id="residentialSuiteRadio" value="residential-suite">
+            <label for="residential-suite">Residential Suite</label>
+          </div>
+          <!-- number of guests -->
+          <label for="no-guests">Number of Guests : </label>
+          <input type="number" name="no-guests" value="1" min="1" max="7">
+          <!-- submit button -->
+          <button type="button" name="button" class="btn" id="viewAvailRoomsBtn">View Available Rooms</button>
+        </form>
+      </section>
+
+      <section id="availRoomsSection" class="all-bookings-sec">
+
+      </section>
+
+      <!-- <nav class="select-room">
 
         <button type="button" name="button" class="btn">Select Check-In Date</button>
 
@@ -66,7 +101,7 @@
 
         <button type="button" name="button" class="btn">Check Selection Availability</button>
 
-      </nav>
+      </nav> -->
 
       <section class="content">
 
